@@ -305,7 +305,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* ============================================================
    CAPABILITY CARDS
    ============================================================ */
-.cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:1px;background:var(--rule)}
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:1px;background:var(--rule);border-radius:4px;overflow:hidden}
 .cap{
   background:var(--card-bg);padding:clamp(24px,2.6vw,34px);
   display:flex;flex-direction:column;gap:12px;text-decoration:none;
