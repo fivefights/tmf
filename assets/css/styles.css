@@ -128,7 +128,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   display:inline-flex;align-items:center;gap:10px;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.82rem;
   letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
-  padding:14px 26px;border:2px solid transparent;cursor:pointer;border-radius:2px;
+  padding:14px 26px;border:2px solid transparent;cursor:pointer;border-radius:4px;
   transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
 }
 .btn:hover{transform:translateY(-1px)}
@@ -229,7 +229,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* mobile */
 .burger{
   margin-left:auto;display:none;background:none;border:1px solid var(--strong-muted);
-  padding:11px 13px;cursor:pointer;gap:4px;flex-direction:column;border-radius:2px;
+  padding:11px 13px;cursor:pointer;gap:4px;flex-direction:column;border-radius:4px;
 }
 .burger span{display:block;width:20px;height:2px;background:currentColor}
 @media (max-width:1080px){.burger{display:flex}}
@@ -413,7 +413,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* values */
 .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
 .value{
-  border:1px solid var(--rule-strong);padding:16px 18px;
+  border:1px solid var(--rule-strong);padding:16px 18px;border-radius:4px;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.8rem;
   letter-spacing:.14em;text-transform:uppercase;
 }
@@ -465,7 +465,7 @@ form{display:grid;gap:18px}
 .field input,.field select,.field textarea{
   font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:300;
   padding:13px 14px;border:1px solid var(--rule-strong);background:var(--card-bg);
-  color:var(--page-fg);width:100%;border-radius:2px;
+  color:var(--page-fg);width:100%;border-radius:4px;
 }
 .band--soft .field input,.band--soft .field select,.band--soft .field textarea{background:var(--paper)}
 .field textarea{min-height:130px;resize:vertical}
