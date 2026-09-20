@@ -55,7 +55,7 @@ body{
   color:var(--page-fg);
   font-family:"Rubik",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:16px;
-  font-weight:300;
+  font-weight:500;
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
 }
@@ -106,7 +106,7 @@ button{font:inherit;color:inherit}
 }
 .eyebrow--plain::after{display:none}
 
-.lede{font-size:clamp(1.05rem,1.6vw,1.22rem);font-weight:300;max-width:62ch;color:var(--page-muted)}
+.lede{font-size:clamp(1.05rem,1.6vw,1.22rem);font-weight:500;max-width:62ch;color:var(--page-muted)}
 .band--soft .lede{color:var(--soft-muted)}
 .band--cream .lede{color:var(--soft2-muted)}
 .band--strong .lede{color:var(--strong-muted)}
@@ -220,7 +220,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .mega-col>a.mega-h:hover{color:var(--accent-light)}
 .mega-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .mega-col li a{
-  text-decoration:none;font-size:.88rem;font-weight:300;color:var(--soft-muted);
+  text-decoration:none;font-size:.88rem;font-weight:500;color:var(--soft-muted);
   display:inline-flex;gap:7px;
 }
 .mega-col li a:hover{color:var(--accent-light)}
@@ -343,7 +343,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 }
 .index-list .t{font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(1rem,1.5vw,1.16rem)}
 .index-list .d{
-  grid-column:2;font-size:.9rem;color:var(--soft-muted);font-weight:300;margin-top:4px;max-width:62ch;
+  grid-column:2;font-size:.9rem;color:var(--soft-muted);font-weight:500;margin-top:4px;max-width:62ch;
 }
 .index-list .arw{color:var(--accent-light);opacity:0;transition:opacity .2s ease,transform .2s ease}
 .index-list a:hover .arw{opacity:1;transform:translateX(3px)}
