@@ -1,0 +1,72 @@
+{
+  "site": {
+    "name": "The Momentum Firm",
+    "origin": "https://www.themomentumfirm.com"
+  },
+  "pages": [
+    {
+      "slug": "",
+      "source": "index.html",
+      "page": "home",
+      "title": "The Momentum Firm | Public Service Transformation Partners",
+      "description": "An end-to-end management consultancy helping public sector and social impact organizations imagine more and deliver better — from strategy through execution.",
+      "jsonld": true
+    },
+    {
+      "slug": "what-we-do",
+      "source": "what-we-do.html",
+      "page": "what-we-do",
+      "title": "Our Capabilities | The Momentum Firm",
+      "description": "Six connected practices: strategy and transformation, organizational design, change management, data and business intelligence, innovation and CX, and social impact consulting."
+    },
+    {
+      "slug": "who-we-serve",
+      "source": "who-we-serve.html",
+      "page": "who-we-serve",
+      "title": "Client Industries | The Momentum Firm",
+      "description": "We partner with mission-driven organizations across federal, state and local government, education, public health, nonprofits, international development, and corporate citizenship."
+    },
+    {
+      "slug": "insights",
+      "source": "insights.html",
+      "page": "insights",
+      "title": "Mindful Momentum | The Momentum Firm",
+      "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public — whitepapers on mayoral agendas, human-centered AI, 311 analytics, and high performance organizations."
+    },
+    {
+      "slug": "about",
+      "source": "about.html",
+      "page": "about",
+      "title": "About the Firm | The Momentum Firm",
+      "description": "Founded by Lakeisha Sesay, MPA, The Momentum Firm exists to close the gap between intention and impact for public sector and social impact leaders."
+    },
+    {
+      "slug": "offices",
+      "source": "offices.html",
+      "page": "offices",
+      "title": "Our Offices | The Momentum Firm",
+      "description": "The Momentum Firm works from Atlanta, Washington, D.C., and Los Angeles, staffing engagements from whichever office is closest to the work."
+    },
+    {
+      "slug": "careers",
+      "source": "careers.html",
+      "page": "careers",
+      "title": "Careers | The Momentum Firm",
+      "description": "Join the talent network of public sector strategists, change practitioners, designers, and analysts who staff Momentum Firm engagements."
+    },
+    {
+      "slug": "press",
+      "source": "press.html",
+      "page": "press",
+      "title": "Press Releases | The Momentum Firm",
+      "description": "Announcements, awards, partnerships, and contract news from The Momentum Firm."
+    },
+    {
+      "slug": "contact",
+      "source": "contact.html",
+      "page": "contact",
+      "title": "Contact Us | The Momentum Firm",
+      "description": "Get in touch with The Momentum Firm — offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
+    }
+  ]
+}
