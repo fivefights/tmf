@@ -98,9 +98,16 @@ identity manual:
 | `--red-lift` | `#FF6A5C` | red at small sizes on navy (contrast) |
 
 Type is **Montserrat** for display and **Rubik** for text, loaded from Google
-Fonts, per the brand manual. Semantic tokens (`--soft-bg`, `--strong-fg`, and
-friends) are redefined for dark mode, so the palette shifts as a set rather
-than per-component.
+Fonts, per the brand manual. Body copy is weight 400.
+
+**There is no dark theme, deliberately.** The brand is a committed identity —
+cream ground, navy ink, red accent — and it should look the same to everyone,
+so `:root` declares `color-scheme: light` and the palette never remaps. An
+earlier version did ship a dark variant, which turned every cream section navy
+for anyone whose OS was set to dark; don't reintroduce one without a decision
+about what cream becomes. Sections are composed from semantic tokens
+(`--soft-bg`, `--soft2-bg`, `--strong-bg` and friends) rather than literal
+colors, so grounds can be re-tuned in one place.
 
 Recurring devices carried over from the brochure: the red letterspaced eyebrow
 with its short rule, the numbered index used for client industries, and the

@@ -4,6 +4,10 @@
    Montserrat (display) · Rubik (text)
    ============================================================ */
 :root{
+  /* The Momentum Firm is a committed identity — cream, navy, red —
+     so the site renders the same in every OS theme. No dark variant. */
+  color-scheme:light;
+
   /* brand constants */
   --navy:#00254A;
   --navy-deep:#001A35;
@@ -48,53 +52,6 @@
   --maxw:1240px;
   --gutter:clamp(18px,4vw,56px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --page-bg:#00203F;
-    --page-fg:var(--cream);
-    --page-muted:#A9BFD6;
-    --soft-bg:#0A2C50;
-    --soft-fg:var(--cream);
-    --soft-muted:#A9BFD6;
-    --soft2-bg:#0D3358;
-    --soft2-fg:var(--cream);
-    --soft2-muted:#A9BFD6;
-    --strong-bg:#00152B;
-    --strong-fg:var(--cream);
-    --strong-muted:#A9BFD6;
-    --card-bg:#0A2C50;
-    --card-line:#164573;
-    --rule:#164573;
-    --rule-strong:#1E5388;
-    --accent-light:var(--red-lift);
-    --accent-dark:var(--red-lift);
-    --focus:#9FC6EE;
-    --shadow:0 18px 40px -28px rgba(0,0,0,.8);
-  }
-}
-:root[data-theme="dark"]{
-  --page-bg:#00203F;
-  --page-fg:var(--cream);
-  --page-muted:#A9BFD6;
-  --soft-bg:#0A2C50;
-  --soft-fg:var(--cream);
-  --soft-muted:#A9BFD6;
-  --soft2-bg:#0D3358;
-  --soft2-fg:var(--cream);
-  --soft2-muted:#A9BFD6;
-  --strong-bg:#00152B;
-  --strong-fg:var(--cream);
-  --strong-muted:#A9BFD6;
-  --card-bg:#0A2C50;
-  --card-line:#164573;
-  --rule:#164573;
-  --rule-strong:#1E5388;
-  --accent-light:var(--red-lift);
-  --accent-dark:var(--red-lift);
-  --focus:#9FC6EE;
-  --shadow:0 18px 40px -28px rgba(0,0,0,.8);
-}
-
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -102,7 +59,7 @@ body{
   color:var(--page-fg);
   font-family:"Rubik",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:16px;
-  font-weight:300;
+  font-weight:400;
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
 }
@@ -156,7 +113,7 @@ button{font:inherit;color:inherit}
 }
 .eyebrow--plain::after{display:none}
 
-.lede{font-size:clamp(1.05rem,1.6vw,1.22rem);font-weight:300;max-width:62ch;color:var(--page-muted)}
+.lede{font-size:clamp(1.05rem,1.6vw,1.22rem);font-weight:400;max-width:62ch;color:var(--page-muted)}
 .band--soft .lede{color:var(--soft-muted)}
 .band--cream .lede{color:var(--soft2-muted)}
 .band--strong .lede{color:var(--strong-muted)}
@@ -226,15 +183,6 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .masthead .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
 .brand{display:flex;align-items:center;flex:0 0 auto;padding:10px 0;text-decoration:none}
 .brand img{width:clamp(168px,19vw,215px);height:auto}
-.brand .lg-dark{display:none}
-:root[data-theme="dark"] .brand .lg-light,
-:root:not([data-theme="light"]) .brand .lg-light{display:none}
-:root[data-theme="dark"] .brand .lg-dark,
-:root:not([data-theme="light"]) .brand .lg-dark{display:block}
-@media (prefers-color-scheme:light){
-  :root:not([data-theme="dark"]) .brand .lg-light{display:block}
-  :root:not([data-theme="dark"]) .brand .lg-dark{display:none}
-}
 
 .mainnav{margin-left:auto;display:flex;align-items:center;gap:4px}
 .mainnav>div{position:static}
@@ -277,7 +225,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .mega-col>a.mega-h:hover{color:var(--accent-light)}
 .mega-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .mega-col li a{
-  text-decoration:none;font-size:.88rem;font-weight:300;color:var(--soft-muted);
+  text-decoration:none;font-size:.88rem;font-weight:400;color:var(--soft-muted);
   display:inline-flex;gap:7px;
 }
 .mega-col li a:hover{color:var(--accent-light)}
@@ -400,7 +348,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 }
 .index-list .t{font-family:"Montserrat",sans-serif;font-weight:700;font-size:clamp(1rem,1.5vw,1.16rem)}
 .index-list .d{
-  grid-column:2;font-size:.9rem;color:var(--soft-muted);font-weight:300;margin-top:4px;max-width:62ch;
+  grid-column:2;font-size:.9rem;color:var(--soft-muted);font-weight:400;margin-top:4px;max-width:62ch;
 }
 .index-list .arw{color:var(--accent-light);opacity:0;transition:opacity .2s ease,transform .2s ease}
 .index-list a:hover .arw{opacity:1;transform:translateX(3px)}
@@ -520,17 +468,11 @@ form{display:grid;gap:18px}
   letter-spacing:.14em;text-transform:uppercase;
 }
 .field input,.field select,.field textarea{
-  font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:300;
+  font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:400;
   padding:13px 14px;border:1px solid var(--rule-strong);background:var(--card-bg);
   color:var(--page-fg);width:100%;border-radius:0;
 }
 .band--soft .field input,.band--soft .field select,.band--soft .field textarea{background:var(--paper)}
-:root[data-theme="dark"] .band--soft .field input,
-:root[data-theme="dark"] .band--soft .field select,
-:root[data-theme="dark"] .band--soft .field textarea,
-:root:not([data-theme="light"]) .band--soft .field input,
-:root:not([data-theme="light"]) .band--soft .field select,
-:root:not([data-theme="light"]) .band--soft .field textarea{background:#00203F}
 .field textarea{min-height:130px;resize:vertical}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media (max-width:560px){.field-row{grid-template-columns:1fr}}
