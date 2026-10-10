@@ -4,16 +4,22 @@
    Montserrat (display) · Rubik (text)
    ============================================================ */
 :root{
+<<<<<<< HEAD
   /* The Momentum Firm is a committed identity — cream, navy, red —
      so the site renders the same in every OS theme. No dark variant. */
   color-scheme:light;
 
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   /* brand constants */
   --navy:#00254A;
   --navy-deep:#001A35;
   --navy-lift:#0A3466;
+<<<<<<< HEAD
   --blue2:#0D3358;        /* secondary blue: nav panels + closing bands */
   --blue2-muted:#A9BFD6;
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   --cream:#FAF2DF;
   --cream-deep:#F2E6C9;
   --red:#FF0000;
@@ -38,7 +44,11 @@
 
   /* semantic: strong band (navy) */
   --strong-bg:var(--navy);
+<<<<<<< HEAD
   --strong-fg:var(--cream);
+=======
+  --strong-fg:#fff;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   --strong-muted:#A9BFD6;
 
   --card-bg:var(--paper);
@@ -65,9 +75,12 @@ body{
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
 }
+<<<<<<< HEAD
 /* emphasis inside headings — the copy deck italicizes one or two
    words per headline; real Montserrat italic, not a synthesized slant */
 h1 em,h2 em,h3 em{font-style:italic;font-weight:inherit}
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 h1,h2,h3,h4,.display{
   font-family:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight:800;
@@ -78,10 +91,14 @@ h1,h2,h3,h4,.display{
 }
 p{margin:0}
 a{color:inherit}
+<<<<<<< HEAD
 /* height:auto is load-bearing — the <img> tags carry width/height attributes
    so the browser can reserve space, but without this the attribute height
    wins over the CSS width and the image renders distorted. */
 img{max-width:100%;display:block;height:auto}
+=======
+img{max-width:100%;display:block}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
 @media (prefers-reduced-motion:reduce){
@@ -94,6 +111,12 @@ button{font:inherit;color:inherit}
 .band--soft{background:var(--soft-bg);color:var(--soft-fg)}
 .band--cream{background:var(--soft2-bg);color:var(--soft2-fg)}
 .band--strong{background:var(--strong-bg);color:var(--strong-fg)}
+<<<<<<< HEAD
+=======
+.band--lift{background:var(--navy-lift);color:#fff}
+.band--lift .dl .k{color:var(--accent-dark)}
+.band--lift .formnote{color:var(--strong-muted)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .band--tight{padding-block:clamp(40px,4.5vw,64px)}
 /* cream bands that sit next to each other keep one continuous ground */
 .band--soft + .band--soft{padding-top:0}
@@ -109,7 +132,11 @@ button{font:inherit;color:inherit}
   margin:0 0 14px;
   display:block;
 }
+<<<<<<< HEAD
 .band--strong .eyebrow,.hero .eyebrow,.footer .eyebrow{color:var(--accent-dark)}
+=======
+.band--strong .eyebrow,.hero .eyebrow,.footer .eyebrow,.band--lift .eyebrow{color:var(--accent-dark)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .eyebrow::after{
   content:"";display:block;width:34px;height:4px;background:var(--red);margin-top:10px;
 }
@@ -119,6 +146,10 @@ button{font:inherit;color:inherit}
 .band--soft .lede{color:var(--soft-muted)}
 .band--cream .lede{color:var(--soft2-muted)}
 .band--strong .lede{color:var(--strong-muted)}
+<<<<<<< HEAD
+=======
+.band--lift .lede{color:var(--strong-muted)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 
 h1{font-size:clamp(2.3rem,5.4vw,4rem)}
 h2{font-size:clamp(1.85rem,3.4vw,2.7rem)}
@@ -136,7 +167,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   display:inline-flex;align-items:center;gap:10px;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.82rem;
   letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+<<<<<<< HEAD
   padding:14px 26px;border:2px solid transparent;cursor:pointer;
+=======
+  padding:14px 26px;border:2px solid transparent;cursor:pointer;border-radius:4px;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
 }
 .btn:hover{transform:translateY(-1px)}
@@ -144,8 +179,13 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .btn--red:hover{background:#D10000;border-color:#D10000}
 .btn--ghost-light{border-color:var(--soft-fg);color:var(--soft-fg)}
 .btn--ghost-light:hover{background:var(--soft-fg);color:var(--soft-bg)}
+<<<<<<< HEAD
 .band--strong .btn--ghost-light,.hero .btn--ghost-light{border-color:var(--cream);color:var(--cream)}
 .band--strong .btn--ghost-light:hover,.hero .btn--ghost-light:hover{background:var(--cream);color:var(--navy)}
+=======
+.band--strong .btn--ghost-light,.hero .btn--ghost-light,.band--lift .btn--ghost-light{border-color:#fff;color:#fff}
+.band--strong .btn--ghost-light:hover,.hero .btn--ghost-light:hover,.band--lift .btn--ghost-light:hover{background:#fff;color:var(--navy)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .btn .arw{transition:transform .18s ease}
 .btn:hover .arw{transform:translateX(3px)}
 
@@ -163,7 +203,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* ============================================================
    HEADER
    ============================================================ */
+<<<<<<< HEAD
 .utility{background:var(--navy-deep);color:var(--cream)}
+=======
+.utility{background:var(--navy-deep);color:#fff}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .utility .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:38px}
 .utility .tag{
   font-family:"Montserrat",sans-serif;font-size:.62rem;font-weight:600;
@@ -179,13 +223,22 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 
 .masthead{
   position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
+<<<<<<< HEAD
   background:var(--navy);
   color:var(--cream);
   border-bottom:1px solid rgba(250,242,223,.14);
+=======
+  background:var(--navy-deep);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12);
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .masthead .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
 .brand{display:flex;align-items:center;flex:0 0 auto;padding:10px 0;text-decoration:none}
 .brand img{width:clamp(168px,19vw,215px);height:auto}
+<<<<<<< HEAD
+=======
+.brand .lg-light{display:none}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 
 .mainnav{margin-left:auto;display:flex;align-items:center;gap:4px}
 .mainnav>div{position:static}
@@ -194,7 +247,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.78rem;
   letter-spacing:.07em;text-transform:uppercase;
   padding:28px 14px;display:inline-flex;align-items:center;gap:7px;
+<<<<<<< HEAD
   text-decoration:none;position:relative;color:var(--cream);
+=======
+  text-decoration:none;position:relative;color:#fff;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .navbtn::after{
   content:"";position:absolute;left:14px;right:14px;bottom:20px;height:3px;background:var(--red);
@@ -208,21 +265,34 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* mega menu */
 .mega{
   position:absolute;left:0;right:0;top:100%;
+<<<<<<< HEAD
   background:var(--blue2);color:var(--cream);
   border-top:3px solid var(--red);
   box-shadow:0 22px 44px -30px rgba(0,0,0,.7);
 }
 .mega .eyebrow,.mega .tlink{color:var(--accent-dark)}
+=======
+  background:var(--soft-bg);color:var(--soft-fg);
+  border-top:3px solid var(--red);
+  border-bottom:1px solid var(--rule-strong);
+  box-shadow:var(--shadow);
+}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .mega-inner{
   width:100%;max-width:var(--maxw);margin-inline:auto;padding:38px var(--gutter) 42px;
   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:clamp(28px,5vw,64px);
 }
 .mega-blurb h3{font-size:1.5rem;margin-bottom:12px}
+<<<<<<< HEAD
 .mega-blurb p{font-size:.92rem;color:var(--blue2-muted);max-width:34ch;margin-bottom:18px}
+=======
+.mega-blurb p{font-size:.92rem;color:var(--soft-muted);max-width:34ch;margin-bottom:18px}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .mega-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px 34px}
 .mega-col>a.mega-h{
   display:block;text-decoration:none;font-family:"Montserrat",sans-serif;font-weight:700;
   font-size:.95rem;line-height:1.3;padding-bottom:10px;margin-bottom:10px;
+<<<<<<< HEAD
   border-bottom:1px solid rgba(250,242,223,.25);
 }
 .mega-col>a.mega-h:hover{color:var(--accent-dark)}
@@ -232,23 +302,48 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   display:inline-flex;gap:7px;
 }
 .mega-col li a:hover{color:var(--accent-dark)}
+=======
+  border-bottom:1px solid var(--rule-strong);
+}
+.mega-col>a.mega-h:hover{color:var(--accent-light)}
+.mega-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.mega-col li a{
+  text-decoration:none;font-size:.88rem;font-weight:400;color:var(--soft-muted);
+  display:inline-flex;gap:7px;
+}
+.mega-col li a:hover{color:var(--accent-light)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 @media (max-width:1080px){.mainnav{display:none}}
 
 /* mobile */
 .burger{
+<<<<<<< HEAD
   margin-left:auto;display:none;background:none;color:var(--cream);
   border:1px solid rgba(250,242,223,.45);
   padding:11px 13px;cursor:pointer;gap:4px;flex-direction:column;
+=======
+  margin-left:auto;display:none;background:none;border:1px solid var(--strong-muted);
+  padding:11px 13px;cursor:pointer;gap:4px;flex-direction:column;border-radius:4px;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .burger span{display:block;width:20px;height:2px;background:currentColor}
 @media (max-width:1080px){.burger{display:flex}}
 .drawer{
+<<<<<<< HEAD
   display:none;background:var(--blue2);color:var(--cream);
   border-bottom:1px solid rgba(250,242,223,.2);
 }
 .drawer.open{display:block}
 .drawer .wrap{padding-block:22px 30px}
 .drawer details{border-bottom:1px solid rgba(250,242,223,.2)}
+=======
+  display:none;background:var(--soft-bg);color:var(--soft-fg);
+  border-bottom:1px solid var(--rule-strong);
+}
+.drawer.open{display:block}
+.drawer .wrap{padding-block:22px 30px}
+.drawer details{border-bottom:1px solid var(--rule-strong)}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .drawer summary{
   cursor:pointer;list-style:none;padding:15px 0;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.9rem;
@@ -256,12 +351,21 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   display:flex;justify-content:space-between;align-items:center;
 }
 .drawer summary::-webkit-details-marker{display:none}
+<<<<<<< HEAD
 .drawer summary::after{content:"+";font-size:1.2rem;font-weight:600;color:var(--accent-dark)}
 .drawer details[open] summary::after{content:"–"}
 .drawer details ul{list-style:none;margin:0;padding:0 0 16px;display:grid;gap:10px}
 .drawer details ul a{text-decoration:none;font-size:.92rem;color:var(--blue2-muted)}
 .drawer .flat{
   display:block;padding:15px 0;border-bottom:1px solid rgba(250,242,223,.2);text-decoration:none;
+=======
+.drawer summary::after{content:"+";font-size:1.2rem;font-weight:600;color:var(--accent-light)}
+.drawer details[open] summary::after{content:"–"}
+.drawer details ul{list-style:none;margin:0;padding:0 0 16px;display:grid;gap:10px}
+.drawer details ul a{text-decoration:none;font-size:.92rem;color:var(--soft-muted)}
+.drawer .flat{
+  display:block;padding:15px 0;border-bottom:1px solid var(--rule-strong);text-decoration:none;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.9rem;
   letter-spacing:.06em;text-transform:uppercase;
 }
@@ -271,7 +375,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
    HERO
    ============================================================ */
 .hero{
+<<<<<<< HEAD
   background:var(--navy);color:var(--cream);position:relative;overflow:hidden;
+=======
+  background:var(--navy);color:#fff;position:relative;overflow:hidden;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   padding-block:clamp(56px,7vw,96px);
 }
 .hero-grid{
@@ -314,7 +422,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* ============================================================
    CAPABILITY CARDS
    ============================================================ */
+<<<<<<< HEAD
 .cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:1px;background:var(--rule)}
+=======
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:1px;background:var(--rule);border-radius:4px;overflow:hidden}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .cap{
   background:var(--card-bg);padding:clamp(24px,2.6vw,34px);
   display:flex;flex-direction:column;gap:12px;text-decoration:none;
@@ -363,7 +475,12 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
    ============================================================ */
 .feature{
   display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+<<<<<<< HEAD
   background:var(--navy);color:var(--cream);align-items:stretch;
+=======
+  background:var(--navy);color:#fff;align-items:stretch;
+  border-radius:4px;overflow:hidden;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .feature .pane{padding:clamp(28px,4vw,54px);display:flex;flex-direction:column;justify-content:center;gap:18px}
 .feature .pane h3{font-size:clamp(1.5rem,2.8vw,2.1rem);color:#fff}
@@ -385,7 +502,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 
 .card-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:clamp(18px,2vw,26px)}
 .icard{
+<<<<<<< HEAD
   background:var(--card-bg);border:1px solid var(--card-line);
+=======
+  background:var(--card-bg);border:1px solid var(--card-line);border-radius:4px;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:12px;
   text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;
 }
@@ -405,12 +526,17 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
    FOUNDER
    ============================================================ */
 .founder{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,68px);align-items:start}
+<<<<<<< HEAD
 .portrait{position:relative;padding:14px 0 0 14px;max-width:420px}
 .portrait::before{
   content:"";position:absolute;left:0;top:0;width:58px;height:58px;
   border-left:10px solid var(--red);border-top:10px solid var(--red);
 }
 .portrait img{width:100%;position:relative}
+=======
+.portrait{max-width:420px}
+.portrait img{width:100%;border-radius:4px}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .founder .role{
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.74rem;
   letter-spacing:.16em;text-transform:uppercase;color:var(--accent-light);margin-top:6px;
@@ -422,7 +548,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* values */
 .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
 .value{
+<<<<<<< HEAD
   border:1px solid var(--rule-strong);padding:16px 18px;
+=======
+  border:1px solid var(--rule-strong);padding:16px 18px;border-radius:4px;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.8rem;
   letter-spacing:.14em;text-transform:uppercase;
 }
@@ -472,9 +602,15 @@ form{display:grid;gap:18px}
   letter-spacing:.14em;text-transform:uppercase;
 }
 .field input,.field select,.field textarea{
+<<<<<<< HEAD
   font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:400;
   padding:13px 14px;border:1px solid var(--rule-strong);background:var(--card-bg);
   color:var(--page-fg);width:100%;border-radius:0;
+=======
+  font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:300;
+  padding:13px 14px;border:1px solid var(--rule-strong);background:var(--card-bg);
+  color:var(--page-fg);width:100%;border-radius:4px;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .band--soft .field input,.band--soft .field select,.band--soft .field textarea{background:var(--paper)}
 .field textarea{min-height:130px;resize:vertical}
@@ -483,7 +619,11 @@ form{display:grid;gap:18px}
 .formnote{font-size:.84rem;color:var(--soft-muted)}
 .formdone{
   display:none;border-left:4px solid var(--red);padding:14px 18px;
+<<<<<<< HEAD
   background:var(--card-bg);font-size:.93rem;
+=======
+  background:var(--card-bg);color:var(--page-fg);font-size:.93rem;
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 }
 .formdone.show{display:block}
 
@@ -495,7 +635,11 @@ form{display:grid;gap:18px}
 .cta-band h2{color:#fff}
 .band--cream .cta-band h2{color:var(--soft2-fg)}
 
+<<<<<<< HEAD
 .footer{background:var(--navy-deep);color:var(--cream);padding-block:clamp(48px,6vw,72px) 28px}
+=======
+.footer{background:var(--navy-deep);color:#fff;padding-block:clamp(48px,6vw,72px) 28px}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 .foot-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2.4fr);gap:clamp(30px,5vw,60px)}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr}}
 .foot-brand img{width:210px;margin-bottom:20px}
@@ -520,6 +664,7 @@ form{display:grid;gap:18px}
 /* ============================================================
    PAGE ROUTING + misc
    ============================================================ */
+<<<<<<< HEAD
 /* Page headers sit on cream, not navy — navy is reserved for the homepage
    hero and the footer, so it stays an accent rather than the ground. */
 .pagehead{background:var(--soft-bg);color:var(--soft-fg);padding-block:clamp(40px,5vw,72px)}
@@ -527,6 +672,17 @@ form{display:grid;gap:18px}
 .pagehead .lede{color:var(--soft-muted);margin-top:18px}
 /* a cream band straight after a cream page header is one continuous ground */
 .pagehead + .band--soft{padding-top:0}
+=======
+.crumb{
+  font-family:"Montserrat",sans-serif;font-weight:600;font-size:.7rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--strong-muted);margin-bottom:18px;
+}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:#fff}
+.pagehead{background:var(--navy);color:#fff;padding-block:clamp(40px,5vw,72px)}
+.pagehead h1{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem)}
+.pagehead .lede{color:#C7D6E5;margin-top:18px}
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 
 .detail{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(26px,4vw,54px);padding-block:clamp(26px,3vw,40px);border-bottom:1px solid var(--rule)}
 .detail:last-of-type{border-bottom:0}
@@ -553,6 +709,7 @@ form{display:grid;gap:18px}
   padding:10px 16px;z-index:100;font-weight:600;
 }
 .skip:focus{left:8px;top:8px}
+<<<<<<< HEAD
 
 /* ============================================================
    HOMEPAGE SECTIONS (website copy v1)
@@ -724,3 +881,5 @@ form{display:grid;gap:18px}
 .band--blue .formdone{
   background:rgba(250,242,223,.1);border-left-color:var(--red);color:var(--cream);
 }
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255

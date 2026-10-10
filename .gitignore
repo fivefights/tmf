@@ -5,4 +5,7 @@ Thumbs.db
 .idea/
 node_modules/
 __pycache__/
+<<<<<<< HEAD
 preview.html
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255

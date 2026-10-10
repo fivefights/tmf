@@ -96,6 +96,7 @@ identity manual:
 | `--red` | `#FF0000` | rules, markers, primary buttons |
 | `--red-ink` | `#D10000` | red at small sizes on light grounds (contrast) |
 | `--red-lift` | `#FF6A5C` | red at small sizes on navy (contrast) |
+<<<<<<< HEAD
 | `--blue2` | `#0D3358` | secondary blue: nav panels and every page's closing band |
 
 Navy layers from dark to light: the utility strip and footer are
@@ -115,6 +116,13 @@ for anyone whose OS was set to dark; don't reintroduce one without a decision
 about what cream becomes. Sections are composed from semantic tokens
 (`--soft-bg`, `--soft2-bg`, `--strong-bg` and friends) rather than literal
 colors, so grounds can be re-tuned in one place.
+=======
+
+Type is **Montserrat** for display and **Rubik** for text, loaded from Google
+Fonts, per the brand manual. Semantic tokens (`--soft-bg`, `--strong-fg`, and
+friends) are redefined for dark mode, so the palette shifts as a set rather
+than per-component.
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
 
 Recurring devices carried over from the brochure: the red letterspaced eyebrow
 with its short rule, the numbered index used for client industries, and the

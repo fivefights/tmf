@@ -97,6 +97,7 @@
   });
 
   /* ----------------------------------------------------------
+<<<<<<< HEAD
      Hero carousel
      Auto-advances, but stops on hover, on keyboard focus, and
      for good once the visitor takes control of it. Honours
@@ -216,6 +217,8 @@
   })();
 
   /* ----------------------------------------------------------
+=======
+>>>>>>> 3b60dfebe1bb1108554604c135a7295dbec93255
      Forms
      Prototype behaviour only — no endpoint is wired up yet.
      Replace the submit handler with a real POST (or point the
