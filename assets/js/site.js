@@ -7,13 +7,13 @@
   /* ----------------------------------------------------------
      Current-section highlight
      Some pages live under a nav heading that isn't their own
-     slug — press and offices both sit under About.
+     slug — press sits under Insights, offices sits under About.
      ---------------------------------------------------------- */
   var NAV_FOR = {
     "what-we-do": "what",
     "who-we-serve": "who",
     "insights": "insights",
-    "press": "about",
+    "press": "insights",
     "about": "about",
     "offices": "about",
     "careers": "careers"
@@ -95,6 +95,125 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { closeMenus(); closeDrawer(); }
   });
+
+  /* ----------------------------------------------------------
+     Hero carousel
+     Auto-advances, but stops on hover, on keyboard focus, and
+     for good once the visitor takes control of it. Honours
+     prefers-reduced-motion by never starting.
+     ---------------------------------------------------------- */
+  (function () {
+    var root = document.querySelector("[data-carousel]");
+    if (!root) return;
+
+    var slides = Array.prototype.slice.call(root.querySelectorAll(".hslide"));
+    var dots = Array.prototype.slice.call(root.querySelectorAll("[data-go]"));
+    if (slides.length < 2) return;
+
+    var count = root.querySelector("[data-count]");
+    var pauseBtn = root.querySelector("[data-pause]");
+    var DELAY = 7000;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var at = 0;
+    var timer = null;
+    var playing = false;
+    var surrendered = reduce; // visitor took over, or motion is unwelcome
+
+    var ICON_PAUSE = "M9 5v14M15 5v14";
+    var ICON_PLAY = "M8 5l11 7-11 7z";
+
+    function show(n) {
+      at = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        var on = k === at;
+        s.classList.toggle("is-on", on);
+        s.setAttribute("aria-hidden", on ? "false" : "true");
+      });
+      dots.forEach(function (d, k) {
+        d.setAttribute("aria-current", k === at ? "true" : "false");
+      });
+      if (count) count.textContent = (at + 1) + " / " + slides.length;
+    }
+
+    function syncButton() {
+      if (!pauseBtn) return;
+      var path = pauseBtn.querySelector("path");
+      if (path) path.setAttribute("d", playing ? ICON_PAUSE : ICON_PLAY);
+      pauseBtn.setAttribute("aria-label", playing ? "Pause slideshow" : "Play slideshow");
+    }
+
+    function tick() {
+      timer = window.setTimeout(function () {
+        show(at + 1);
+        tick();
+      }, DELAY);
+    }
+
+    function play() {
+      if (surrendered || timer) return;
+      playing = true;
+      tick();
+      syncButton();
+    }
+
+    function halt() {
+      if (timer) { window.clearTimeout(timer); timer = null; }
+    }
+
+    function pause() {
+      halt();
+      playing = false;
+      syncButton();
+    }
+
+    /* Any deliberate move by the visitor ends auto-advance for the session —
+       nothing is more irritating than a slide changing while you read it. */
+    function takeOver(n) {
+      surrendered = true;
+      halt();
+      playing = false;
+      syncButton();
+      show(n);
+    }
+
+    dots.forEach(function (d) {
+      d.addEventListener("click", function () {
+        takeOver(parseInt(d.getAttribute("data-go"), 10));
+      });
+    });
+    var prevBtn = root.querySelector("[data-prev]");
+    var nextBtn = root.querySelector("[data-next]");
+    if (prevBtn) prevBtn.addEventListener("click", function () { takeOver(at - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { takeOver(at + 1); });
+
+    if (pauseBtn) {
+      pauseBtn.addEventListener("click", function () {
+        if (playing) { surrendered = true; pause(); }
+        else { surrendered = false; play(); }
+      });
+    }
+
+    root.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); takeOver(at - 1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); takeOver(at + 1); }
+    });
+
+    root.addEventListener("mouseenter", halt);
+    root.addEventListener("mouseleave", function () { if (playing) tick(); });
+    root.addEventListener("focusin", halt);
+    root.addEventListener("focusout", function () {
+      if (playing && !root.contains(document.activeElement)) tick();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) halt();
+      else if (playing) tick();
+    });
+
+    show(0);
+    syncButton();
+    play();
+  })();
 
   /* ----------------------------------------------------------
      Forms

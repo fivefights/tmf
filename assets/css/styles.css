@@ -687,3 +687,61 @@ form{display:grid;gap:18px}
 
 /* a lone mega column shouldn't stretch across the whole panel */
 .mega-cols > .mega-col:only-child{max-width:460px}
+
+/* ============================================================
+   HERO CAROUSEL
+   Slides share one grid cell so the hero height is set by the
+   tallest slide and never jumps between them.
+   ============================================================ */
+.hero-slides{display:grid;align-content:start}
+.hslide{
+  grid-area:1/1;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .45s ease,transform .45s ease,visibility 0s linear .45s;
+}
+.hslide.is-on{
+  opacity:1;visibility:visible;transform:none;
+  transition:opacity .45s ease,transform .45s ease,visibility 0s;
+}
+@media (prefers-reduced-motion:reduce){
+  .hslide{transition:none;transform:none}
+  .hslide.is-on{transition:none}
+}
+.hslide h2{
+  color:#fff;font-size:clamp(1.9rem,3.8vw,2.85rem);margin-bottom:22px;
+}
+.hslide h1{margin-bottom:22px}
+.hero .prose{max-width:60ch}
+.hero .prose p{color:#C7D6E5}
+.hslide .cta-row{margin-top:clamp(24px,2.6vw,32px)}
+
+/* controls */
+.hero-controls{
+  display:flex;align-items:center;gap:clamp(14px,2vw,22px);flex-wrap:wrap;
+  margin-top:clamp(28px,3.5vw,44px);
+  padding-top:clamp(20px,2.4vw,28px);
+  border-top:1px solid rgba(250,242,223,.2);
+}
+.hero-nav{display:flex;gap:8px}
+.hero-btn{
+  width:42px;height:42px;display:grid;place-items:center;cursor:pointer;
+  background:none;border:1px solid rgba(250,242,223,.4);color:var(--cream);
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+.hero-btn:hover{background:var(--cream);border-color:var(--cream);color:var(--navy)}
+.hero-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2}
+.hero-dots{display:flex;gap:8px;margin-right:auto}
+.hero-dot{
+  width:38px;height:4px;padding:0;border:0;cursor:pointer;
+  background:rgba(250,242,223,.28);transition:background .2s ease;
+}
+.hero-dot:hover{background:rgba(250,242,223,.55)}
+.hero-dot[aria-current="true"]{background:var(--red)}
+.hero-count{
+  font-family:"Montserrat",sans-serif;font-weight:700;font-size:.72rem;
+  letter-spacing:.16em;color:#8FA9C4;font-variant-numeric:tabular-nums;
+}
+@media (max-width:560px){
+  .hero-dots{margin-right:0;order:3;width:100%}
+  .hero-dot{flex:1}
+}
