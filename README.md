@@ -96,6 +96,13 @@ identity manual:
 | `--red` | `#FF0000` | rules, markers, primary buttons |
 | `--red-ink` | `#D10000` | red at small sizes on light grounds (contrast) |
 | `--red-lift` | `#FF6A5C` | red at small sizes on navy (contrast) |
+| `--blue2` | `#0D3358` | secondary blue: nav panels and every page's closing band |
+
+Navy layers from dark to light: the utility strip and footer are
+`--navy-deep`, the sticky masthead and the homepage hero are `--navy`, and
+the mega menus, mobile drawer and closing bands are `--blue2`. Page content
+sits on cream and white between the dark header and the dark foot, so every
+page steps cream → secondary blue → navy as you reach the bottom.
 
 Type is **Montserrat** for display and **Rubik** for text, loaded from Google
 Fonts, per the brand manual. Body copy is weight 400.

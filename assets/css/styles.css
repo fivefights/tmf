@@ -12,6 +12,8 @@
   --navy:#00254A;
   --navy-deep:#001A35;
   --navy-lift:#0A3466;
+  --blue2:#0D3358;        /* secondary blue: nav panels + closing bands */
+  --blue2-muted:#A9BFD6;
   --cream:#FAF2DF;
   --cream-deep:#F2E6C9;
   --red:#FF0000;
@@ -177,8 +179,9 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 
 .masthead{
   position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
-  background:var(--page-bg);
-  border-bottom:1px solid var(--rule);
+  background:var(--navy);
+  color:var(--cream);
+  border-bottom:1px solid rgba(250,242,223,.14);
 }
 .masthead .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
 .brand{display:flex;align-items:center;flex:0 0 auto;padding:10px 0;text-decoration:none}
@@ -191,7 +194,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.78rem;
   letter-spacing:.07em;text-transform:uppercase;
   padding:28px 14px;display:inline-flex;align-items:center;gap:7px;
-  text-decoration:none;position:relative;color:var(--page-fg);
+  text-decoration:none;position:relative;color:var(--cream);
 }
 .navbtn::after{
   content:"";position:absolute;left:14px;right:14px;bottom:20px;height:3px;background:var(--red);
@@ -205,46 +208,47 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 /* mega menu */
 .mega{
   position:absolute;left:0;right:0;top:100%;
-  background:var(--soft-bg);color:var(--soft-fg);
+  background:var(--blue2);color:var(--cream);
   border-top:3px solid var(--red);
-  border-bottom:1px solid var(--rule-strong);
-  box-shadow:var(--shadow);
+  box-shadow:0 22px 44px -30px rgba(0,0,0,.7);
 }
+.mega .eyebrow,.mega .tlink{color:var(--accent-dark)}
 .mega-inner{
   width:100%;max-width:var(--maxw);margin-inline:auto;padding:38px var(--gutter) 42px;
   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:clamp(28px,5vw,64px);
 }
 .mega-blurb h3{font-size:1.5rem;margin-bottom:12px}
-.mega-blurb p{font-size:.92rem;color:var(--soft-muted);max-width:34ch;margin-bottom:18px}
+.mega-blurb p{font-size:.92rem;color:var(--blue2-muted);max-width:34ch;margin-bottom:18px}
 .mega-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px 34px}
 .mega-col>a.mega-h{
   display:block;text-decoration:none;font-family:"Montserrat",sans-serif;font-weight:700;
   font-size:.95rem;line-height:1.3;padding-bottom:10px;margin-bottom:10px;
-  border-bottom:1px solid var(--rule-strong);
+  border-bottom:1px solid rgba(250,242,223,.25);
 }
-.mega-col>a.mega-h:hover{color:var(--accent-light)}
+.mega-col>a.mega-h:hover{color:var(--accent-dark)}
 .mega-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .mega-col li a{
-  text-decoration:none;font-size:.88rem;font-weight:400;color:var(--soft-muted);
+  text-decoration:none;font-size:.88rem;font-weight:400;color:var(--blue2-muted);
   display:inline-flex;gap:7px;
 }
-.mega-col li a:hover{color:var(--accent-light)}
+.mega-col li a:hover{color:var(--accent-dark)}
 @media (max-width:1080px){.mainnav{display:none}}
 
 /* mobile */
 .burger{
-  margin-left:auto;display:none;background:none;border:1px solid var(--rule-strong);
+  margin-left:auto;display:none;background:none;color:var(--cream);
+  border:1px solid rgba(250,242,223,.45);
   padding:11px 13px;cursor:pointer;gap:4px;flex-direction:column;
 }
 .burger span{display:block;width:20px;height:2px;background:currentColor}
 @media (max-width:1080px){.burger{display:flex}}
 .drawer{
-  display:none;background:var(--soft-bg);color:var(--soft-fg);
-  border-bottom:1px solid var(--rule-strong);
+  display:none;background:var(--blue2);color:var(--cream);
+  border-bottom:1px solid rgba(250,242,223,.2);
 }
 .drawer.open{display:block}
 .drawer .wrap{padding-block:22px 30px}
-.drawer details{border-bottom:1px solid var(--rule-strong)}
+.drawer details{border-bottom:1px solid rgba(250,242,223,.2)}
 .drawer summary{
   cursor:pointer;list-style:none;padding:15px 0;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.9rem;
@@ -252,12 +256,12 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   display:flex;justify-content:space-between;align-items:center;
 }
 .drawer summary::-webkit-details-marker{display:none}
-.drawer summary::after{content:"+";font-size:1.2rem;font-weight:600;color:var(--accent-light)}
+.drawer summary::after{content:"+";font-size:1.2rem;font-weight:600;color:var(--accent-dark)}
 .drawer details[open] summary::after{content:"–"}
 .drawer details ul{list-style:none;margin:0;padding:0 0 16px;display:grid;gap:10px}
-.drawer details ul a{text-decoration:none;font-size:.92rem;color:var(--soft-muted)}
+.drawer details ul a{text-decoration:none;font-size:.92rem;color:var(--blue2-muted)}
 .drawer .flat{
-  display:block;padding:15px 0;border-bottom:1px solid var(--rule-strong);text-decoration:none;
+  display:block;padding:15px 0;border-bottom:1px solid rgba(250,242,223,.2);text-decoration:none;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.9rem;
   letter-spacing:.06em;text-transform:uppercase;
 }
@@ -623,7 +627,7 @@ form{display:grid;gap:18px}
 .foot-cols .pending{font-size:.88rem;color:#8FA9C4}
 
 /* mega menu: service descriptor line (replaces the sub-service list) */
-.mega-col .mega-d{font-size:.85rem;color:var(--soft-muted);max-width:30ch}
+.mega-col .mega-d{font-size:.85rem;color:var(--blue2-muted);max-width:30ch}
 .foot-cols>div{min-width:0}
 .foot-cols a,.foot-base p{overflow-wrap:anywhere}
 
@@ -686,4 +690,37 @@ form{display:grid;gap:18px}
 @media (max-width:560px){
   .hero-dots{margin-right:0;order:3;width:100%}
   .hero-dot{flex:1}
+}
+
+/* ============================================================
+   SECONDARY BLUE BAND
+   Every page closes on this before the navy footer, so the
+   palette steps down: cream page → secondary blue → navy.
+   ============================================================ */
+.band--blue{background:var(--blue2);color:var(--cream)}
+.band--blue h2,.band--blue h3,.band--blue .cta-band h2,.band--blue .final h2{color:#fff}
+.band--blue .eyebrow,.band--blue .tlink{color:var(--accent-dark)}
+.band--blue .lede,
+.band--blue .section-head p,
+.band--blue .prose p,
+.band--blue .formnote,
+.band--blue .office address,
+.band--blue .diff p{color:var(--blue2-muted)}
+.band--blue .btn--ghost-light{border-color:var(--cream);color:var(--cream)}
+.band--blue .btn--ghost-light:hover{background:var(--cream);color:var(--navy)}
+.band--blue .value{border-color:rgba(250,242,223,.3)}
+.band--blue .index-list li,
+.band--blue .index-list li:first-child{border-color:rgba(250,242,223,.2)}
+.band--blue .dl .v a{border-bottom-color:rgba(250,242,223,.5)}
+
+/* forms on the blue ground keep white fields for legibility */
+.band--blue .field input,
+.band--blue .field select,
+.band--blue .field textarea{
+  background:var(--paper);color:var(--navy);border-color:transparent;
+}
+.band--blue .field input::placeholder,
+.band--blue .field textarea::placeholder{color:#7d8fa3}
+.band--blue .formdone{
+  background:rgba(250,242,223,.1);border-left-color:var(--red);color:var(--cream);
 }
