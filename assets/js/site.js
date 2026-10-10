@@ -7,13 +7,13 @@
   /* ----------------------------------------------------------
      Current-section highlight
      Some pages live under a nav heading that isn't their own
-     slug — press sits under Insights, offices sits under About.
+     slug — press and offices both sit under About.
      ---------------------------------------------------------- */
   var NAV_FOR = {
     "what-we-do": "what",
     "who-we-serve": "who",
     "insights": "insights",
-    "press": "insights",
+    "press": "about",
     "about": "about",
     "offices": "about",
     "careers": "careers"

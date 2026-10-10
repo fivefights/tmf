@@ -677,3 +677,6 @@ form{display:grid;gap:18px}
 .mega-col .mega-d{font-size:.85rem;color:var(--soft-muted);max-width:30ch}
 .foot-cols>div{min-width:0}
 .foot-cols a,.foot-base p{overflow-wrap:anywhere}
+
+/* a lone mega column shouldn't stretch across the whole panel */
+.mega-cols > .mega-col:only-child{max-width:460px}
