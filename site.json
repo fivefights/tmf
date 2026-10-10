@@ -8,8 +8,8 @@
       "slug": "",
       "source": "index.html",
       "page": "home",
-      "title": "The Momentum Firm | Public Service Transformation Partners",
-      "description": "An end-to-end management consultancy helping public sector and social impact organizations imagine more and deliver better — from strategy through execution.",
+      "title": "The Momentum Firm | Public-Sector Consulting",
+      "description": "Public-sector consulting that helps government, education, and nonprofit organizations move ambitious priorities from paper to practice \u2014 improving how they operate, deliver, and serve.",
       "jsonld": true
     },
     {
@@ -17,7 +17,7 @@
       "source": "what-we-do.html",
       "page": "what-we-do",
       "title": "Our Capabilities | The Momentum Firm",
-      "description": "Six connected practices: strategy and transformation, organizational design, change management, data and business intelligence, innovation and CX, and social impact consulting."
+      "description": "Five practices for public-sector organizations: strategy and transformation, enterprise program management, organizational change management, analytics and operational intelligence, and digital transformation and service modernization."
     },
     {
       "slug": "who-we-serve",
@@ -31,7 +31,7 @@
       "source": "insights.html",
       "page": "insights",
       "title": "Mindful Momentum | The Momentum Firm",
-      "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public — whitepapers on mayoral agendas, human-centered AI, 311 analytics, and high performance organizations."
+      "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public \u2014 whitepapers on mayoral agendas, human-centered AI, 311 analytics, and high performance organizations."
     },
     {
       "slug": "about",
@@ -51,8 +51,8 @@
       "slug": "careers",
       "source": "careers.html",
       "page": "careers",
-      "title": "Careers | The Momentum Firm",
-      "description": "Join the talent network of public sector strategists, change practitioners, designers, and analysts who staff Momentum Firm engagements."
+      "title": "Talent Network | The Momentum Firm",
+      "description": "Join The Momentum Firm's talent network to be considered for future consulting and contractor opportunities in the public sector."
     },
     {
       "slug": "press",
@@ -66,7 +66,7 @@
       "source": "contact.html",
       "page": "contact",
       "title": "Contact Us | The Momentum Firm",
-      "description": "Get in touch with The Momentum Firm — offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
+      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
     }
   ]
 }
