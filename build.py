@@ -36,7 +36,7 @@ ORG_JSONLD = """<script type="application/ld+json">
   "description": "An end-to-end management consultancy helping public sector and social impact organizations imagine more and deliver better.",
   "url": "%s/",
   "logo": "%s/assets/img/logo-navy.png",
-  "email": "info@themomentumfirm.com",
+  "email": "Lakeisha@themomentumfirm.com",
   "telephone": "+1-404-895-3762",
   "founder": {"@type": "Person", "name": "Lakeisha Sesay, MPA"},
   "address": [
