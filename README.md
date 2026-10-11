@@ -40,6 +40,10 @@ placeholder and is marked as such both in the pages and in this file.
 
 **Edit `src/`, not the built pages at the root.** Running the build overwrites them.
 
+For working conventions, the brand palette, and the mistakes already made
+here, see [`CLAUDE.md`](CLAUDE.md) — it loads automatically at the start of a
+Claude Code session in this repo.
+
 ## Building
 
 ```bash
