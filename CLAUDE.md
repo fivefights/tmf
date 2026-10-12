@@ -56,8 +56,12 @@ light grounds and `--accent-dark` (`--red-lift`) on dark ones. Check any new red
 text — this has been a real bug twice.
 
 Type is **Montserrat** (display, 600/700/800 + italics) and **Rubik** (body,
-400/500/600), from Google Fonts. Body copy is weight 400. Headlines italicise
-one or two words for emphasis — that's deliberate, from the copy deck.
+400/500/600), from Google Fonts. Body copy is weight 400. Headlines on inner pages
+italicise one or two words for emphasis, from the copy deck. The homepage
+carousel is the exception: the client asked for no italics anywhere in it.
+
+Button labels render in all caps through CSS (`text-transform: uppercase` on
+`.btn`), whatever case the source uses. Change button copy, not that style.
 
 Recurring devices: the red letterspaced eyebrow with its short rule underneath,
 and the numbered index used for client industries. Corner radius is 4px on
