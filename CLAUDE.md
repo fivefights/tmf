@@ -56,9 +56,9 @@ light grounds and `--accent-dark` (`--red-lift`) on dark ones. Check any new red
 text — this has been a real bug twice.
 
 Type is **Montserrat** (display, 600/700/800 + italics) and **Rubik** (body,
-400/500/600), from Google Fonts. Body copy is weight 400. Headlines on inner pages
-italicise one or two words for emphasis, from the copy deck. The homepage
-carousel is the exception: the client asked for no italics anywhere in it.
+400/500/600), from Google Fonts. Body copy is weight 400. Headings carry no
+italics anywhere on the site — the client asked for them removed, overriding
+the copy deck's italicised words. Don't wrap heading words in `<em>`.
 
 Button labels render in all caps through CSS (`text-transform: uppercase` on
 `.btn`), whatever case the source uses. Change button copy, not that style.
@@ -81,7 +81,7 @@ one without first deciding what cream becomes in it.
 
 ## Page structure
 
-Nine pages: `/`, `/what-we-do/`, `/who-we-serve/`, `/insights/`, `/about/`,
+Ten pages: `/`, `/what-we-do/`, `/social-impact/`, `/who-we-serve/`, `/insights/`, `/about/`,
 `/offices/`, `/careers/`, `/press/`, `/contact/`, plus `404.html`.
 
 Section grounds alternate cream and white, and **every page closes on
