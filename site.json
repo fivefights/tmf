@@ -20,6 +20,13 @@
       "description": "Five practices for public-sector organizations: strategy and transformation, enterprise program management, organizational change management, analytics and operational intelligence, and digital transformation and service modernization."
     },
     {
+      "slug": "social-impact",
+      "source": "social-impact.html",
+      "page": "social-impact",
+      "title": "Social Impact & Giving Services | The Momentum Firm",
+      "description": "Strategy, grantmaking, and impact measurement for foundations, corporate citizenship teams, and the nonprofits they fund."
+    },
+    {
       "slug": "who-we-serve",
       "source": "who-we-serve.html",
       "page": "who-we-serve",
@@ -66,7 +73,7 @@
       "source": "contact.html",
       "page": "contact",
       "title": "Contact Us | The Momentum Firm",
-      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. Lakeisha@themomentumfirm.com, 404-895-3762."
+      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
     }
   ]
 }
