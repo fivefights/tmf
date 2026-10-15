@@ -17,21 +17,21 @@
       "source": "what-we-do.html",
       "page": "what-we-do",
       "title": "Our Capabilities | The Momentum Firm",
-      "description": "Five practices for public-sector organizations: strategy and transformation, enterprise program management, organizational change management, analytics and operational intelligence, and digital transformation and service modernization."
+      "description": "Five practices for public-sector organizations: enterprise strategy and transformation, analytics and operational intelligence, implementation management and oversight, organizational change management, and program design and evaluation."
     },
     {
       "slug": "social-impact",
       "source": "social-impact.html",
       "page": "social-impact",
-      "title": "Social Impact & Giving Services | The Momentum Firm",
-      "description": "Strategy, grantmaking, and impact measurement for foundations, corporate citizenship teams, and the nonprofits they fund."
+      "title": "Social Impact | The Momentum Firm",
+      "description": "Pro bono and low bono design thinking workshops and training for smaller organizations, and community grants for social innovation and economic empowerment."
     },
     {
       "slug": "who-we-serve",
       "source": "who-we-serve.html",
       "page": "who-we-serve",
       "title": "Client Industries | The Momentum Firm",
-      "description": "We partner with mission-driven organizations across federal, state and local government, education, public health, nonprofits, international development, and corporate citizenship."
+      "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, and public health."
     },
     {
       "slug": "insights",
@@ -52,7 +52,7 @@
       "source": "offices.html",
       "page": "offices",
       "title": "Our Offices | The Momentum Firm",
-      "description": "The Momentum Firm works from Atlanta, Washington, D.C., and Los Angeles, staffing engagements from whichever office is closest to the work."
+      "description": "The Momentum Firm works from Atlanta, Washington, D.C., Los Angeles, Houston, and New York City, staffing engagements from whichever office is closest to the work."
     },
     {
       "slug": "careers",
@@ -73,7 +73,7 @@
       "source": "contact.html",
       "page": "contact",
       "title": "Contact Us | The Momentum Firm",
-      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
+      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., Los Angeles, Houston, and New York City. info@themomentumfirm.com, 404-895-3762."
     }
   ]
 }

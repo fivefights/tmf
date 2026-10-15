@@ -129,9 +129,10 @@ offset red corner bracket on the founder portrait.
 Draft copy is marked in the pages with a red asterisk and a note at the bottom
 of the relevant section.
 
-- **Sub-capabilities** under Change Management, Data Analytics, Innovation & CX,
-  and one slot under Organizational Design were `XXX` in the website plan.
-  Draft names are in place so the structure could be reviewed.
+- **Practice descriptions** for Implementation Management & Oversight and
+  Program Design & Evaluation — new in the v2 website plan, which names them
+  and their services but has no description copy yet.
+- **Houston and New York City** offices show "Address coming soon".
 - **Industry descriptions** on `/who-we-serve/` — the source documents list
   industry names only.
 - **Whitepaper summaries** on `/insights/` — titles are real, summaries are
