@@ -108,12 +108,17 @@ and a `.draftnote` explaining it at the foot of its section. Keep that
 convention for anything written as a placeholder — it's how the client spots
 what still needs their words.
 
-Currently flagged: sub-service names under four of the five practices, the
-industry descriptions, the whitepaper summaries, and one press release with no
-named recipient. Testimonials are empty placeholder cards awaiting real quotes.
+Currently flagged: descriptions for the two new practices (Implementation
+Management & Oversight, Program Design & Evaluation), the industry
+descriptions, the Social Impact page's descriptions, the whitepaper summaries,
+and one press release with no named recipient. Testimonials are empty
+placeholder cards awaiting real quotes. Houston and New York City offices show
+"Address coming soon" and are left out of the JSON-LD in `build.py` until
+their addresses are final.
 
 Source documents, if copy questions come up: the firm brochure (v6.5), the
-website plan, and "The Momentum Firm Website Copy V1". The copy doc covers the
+website plan (v2 is current: practices, services, offices, Social Impact), and
+"The Momentum Firm Website Copy V1". The copy doc covers the
 homepage only; where it offered two options, option 2 was chosen for both.
 
 ---
