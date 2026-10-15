@@ -266,7 +266,7 @@
 
 <main id="main">
 <!-- Hero carousel -->
-<section class="hero" data-carousel aria-roledescription="carousel" aria-label="The Momentum Firm highlights">
+<section class="hero" data-carousel data-slide="0" aria-roledescription="carousel" aria-label="The Momentum Firm highlights">
   <div class="wrap hero-grid">
     <div>
       <div class="hero-slides">
@@ -340,7 +340,11 @@
       </div>
     </div>
 
-    <div class="hero-motif" aria-hidden="true"><i></i><i></i><i></i></div>
+    <!-- slide 1 shows the photo; slides 2–4 show the rising bars -->
+    <div class="hero-art" aria-hidden="true">
+      <img class="hero-photo" src="assets/img/hero-home.jpg" alt="" width="900" height="1125">
+      <div class="hero-motif"><i></i><i></i><i></i></div>
+    </div>
   </div>
 </section>
 

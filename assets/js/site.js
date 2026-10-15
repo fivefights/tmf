@@ -134,6 +134,7 @@
         d.setAttribute("aria-current", k === at ? "true" : "false");
       });
       if (count) count.textContent = (at + 1) + " / " + slides.length;
+      root.setAttribute("data-slide", at); // lets CSS swap the art beside slide 1
     }
 
     function syncButton() {
