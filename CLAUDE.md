@@ -111,8 +111,7 @@ what still needs their words.
 Currently flagged: descriptions for the two new practices (Implementation
 Management & Oversight, Program Design & Evaluation), the industry
 descriptions, the Social Impact page's descriptions, the whitepaper summaries,
-and one press release with no named recipient. Testimonials are empty
-placeholder cards awaiting real quotes. Houston and New York City offices show
+and one press release with no named recipient. Houston and New York City offices show
 "Address coming soon" and are left out of the JSON-LD in `build.py` until
 their addresses are final.
 
