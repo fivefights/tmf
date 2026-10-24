@@ -19,6 +19,8 @@
   --red:#FF0000;
   --red-ink:#D10000;      /* red for small text on light grounds */
   --red-lift:#FF6A5C;     /* red for small text on navy grounds */
+  --gold:#DAA520;         /* brand secondary: Deep Gold */
+  --eyebrow-rule:var(--gold); /* gold on cream and white; red on navy/blue (below) */
   --paper:#FFFFFF;
 
   /* semantic: page */
@@ -108,9 +110,11 @@ button{font:inherit;color:inherit}
 }
 .band--strong .eyebrow,.hero .eyebrow,.footer .eyebrow{color:var(--accent-dark)}
 .eyebrow::after{
-  content:"";display:block;width:34px;height:4px;background:var(--red);margin-top:10px;
+  content:"";display:block;width:34px;height:4px;background:var(--eyebrow-rule);margin-top:10px;
 }
 .eyebrow--plain::after{display:none}
+/* the gold rule reads oddly on navy and blue grounds, so those keep the red */
+.hero,.band--blue,.band--strong,.footer,.mega,.drawer{--eyebrow-rule:var(--red)}
 
 .lede{font-size:clamp(1.05rem,1.6vw,1.22rem);font-weight:400;max-width:62ch;color:var(--page-muted)}
 .band--soft .lede{color:var(--soft-muted)}
@@ -457,7 +461,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .office-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(max(230px,calc(33.333% - 27px)),1fr));gap:clamp(20px,3vw,40px)}
 .office{border-top:4px solid var(--red);padding-top:18px;display:grid;gap:6px}
 .office h3{font-size:1.15rem}
-.office address{font-style:normal;font-size:.94rem;color:var(--strong-muted)}
+.office address{font-style:normal;font-size:.94rem;color:var(--page-muted)}
 .band--soft .office address{color:var(--soft-muted)}
 
 .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,64px);align-items:start}
@@ -532,6 +536,8 @@ form{display:grid;gap:18px}
 .pagehead .lede{color:var(--soft-muted);margin-top:18px}
 /* a cream band straight after a cream page header is one continuous ground */
 .pagehead + .band--soft{padding-top:0}
+/* back-to-back white bands (Our Firm) get a hairline to keep them apart */
+.band--ruled{border-top:1px solid var(--rule)}
 /* pagehead with a photo on the right — What We Do, Who We Serve */
 .pagehead-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
 .pagehead-img img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
@@ -720,3 +726,4 @@ form{display:grid;gap:18px}
 .band--blue .formdone{
   background:rgba(250,242,223,.1);border-left-color:var(--red);color:#fff;
 }
+
