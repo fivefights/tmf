@@ -131,9 +131,8 @@ offset red corner bracket on the founder portrait.
 Draft copy is marked in the pages with a red asterisk and a note at the bottom
 of the relevant section.
 
-- **Practice descriptions** for Implementation Management & Oversight and
-  Program Design & Evaluation — new in the v2 website plan, which names them
-  and their services but has no description copy yet.
+- **Capability overviews and service descriptions** on `/what-we-do/` are
+  initial drafts written from the v8 brochure, awaiting client review.
 - **Industry descriptions** on `/who-we-serve/` — the source documents list
   industry names only.
 - **Whitepaper summaries** on `/insights/` — titles are real, summaries are
