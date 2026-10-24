@@ -41,18 +41,25 @@
       "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public \u2014 whitepapers on mayoral agendas, human-centered AI, 311 analytics, and high performance organizations."
     },
     {
+      "slug": "our-founder",
+      "source": "our-founder.html",
+      "page": "our-founder",
+      "title": "Our Founder | The Momentum Firm",
+      "description": "Lakeisha Sesay, MPA, founded The Momentum Firm after leading complex public-sector transformation programs, including as a North America Strategy Executive at Accenture."
+    },
+    {
       "slug": "about",
       "source": "about.html",
       "page": "about",
-      "title": "About the Firm | The Momentum Firm",
-      "description": "Founded by Lakeisha Sesay, MPA, The Momentum Firm exists to close the gap between intention and impact for public sector and social impact leaders."
+      "title": "Our Firm | The Momentum Firm",
+      "description": "The Momentum Firm is an end-to-end management consultancy for governments, the public sector, and social impact organizations, with offices in Atlanta, Washington, D.C., Los Angeles, Houston, and New York City."
     },
     {
-      "slug": "offices",
-      "source": "offices.html",
-      "page": "offices",
-      "title": "Our Offices | The Momentum Firm",
-      "description": "The Momentum Firm works from Atlanta, Washington, D.C., Los Angeles, Houston, and New York City, staffing engagements from whichever office is closest to the work."
+      "slug": "mission-vision-values",
+      "source": "mission-vision-values.html",
+      "page": "mission-vision-values",
+      "title": "Our Mission, Vision, & Values | The Momentum Firm",
+      "description": "Why The Momentum Firm exists, where it is headed, and the values behind the work: integrity, agility, community, innovation, excellence, and impact."
     },
     {
       "slug": "careers",

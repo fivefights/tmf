@@ -14,10 +14,12 @@ placeholder and is marked as such both in the pages and in this file.
 .
 ├── index.html              ← built pages (committed, so GitHub Pages serves them directly)
 ├── what-we-do/index.html
+├── social-impact/index.html
 ├── who-we-serve/index.html
 ├── insights/index.html
-├── about/index.html
-├── offices/index.html
+├── our-founder/index.html
+├── about/index.html        ← Our Firm, offices list at the bottom
+├── mission-vision-values/index.html
 ├── careers/index.html
 ├── press/index.html
 ├── contact/index.html

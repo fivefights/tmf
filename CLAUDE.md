@@ -81,8 +81,10 @@ one without first deciding what cream becomes in it.
 
 ## Page structure
 
-Ten pages: `/`, `/what-we-do/`, `/social-impact/`, `/who-we-serve/`, `/insights/`, `/about/`,
-`/offices/`, `/careers/`, `/press/`, `/contact/`, plus `404.html`.
+Eleven pages: `/`, `/what-we-do/`, `/who-we-serve/`, `/insights/`,
+`/our-founder/`, `/about/` (Our Firm, with the offices list at `#offices`),
+`/mission-vision-values/`, `/social-impact/`, `/careers/`, `/press/`,
+`/contact/`, plus `404.html`. There is no separate offices page.
 
 Section grounds alternate cream and white, and **every page closes on
 `--blue2`** before the navy footer. Careers and Contact put their form section
@@ -94,8 +96,9 @@ hero takes the height of the tallest and never jumps. Auto-advance stops on
 hover and focus and ends for the session once a visitor touches a control; it
 never starts under `prefers-reduced-motion`.
 
-Navigation: What We Do, Who We Serve, Insights (Mindful Momentum + Press),
-About, Careers, plus a red Contact Us button. All nav labels are title case.
+Navigation: What We Do, Who We Serve, Insights (Mindful Momentum + Press), About
+(Our Founder, Our Firm, Our Mission, Vision, & Values, Social Impact),
+Careers, plus a red Contact Us button. All nav labels are title case.
 Buttons carry no arrow and centre their labels; arrows stay on text links,
 index rows, and the carousel controls, where they indicate direction.
 
