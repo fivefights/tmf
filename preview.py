@@ -57,7 +57,8 @@ ROUTER = """
   "use strict";
   var PAGES = %s;
   var NAV_FOR = {"what-we-do":"what","who-we-serve":"who","insights":"insights",
-                 "press":"insights","about":"about","offices":"about","careers":"careers"};
+                 "press":"insights","our-founder":"about","about":"about",
+                 "mission-vision-values":"about","social-impact":"about","careers":"careers"};
   function route(){
     var id = (location.hash || "#/home").replace("#/","").split("?")[0];
     if (PAGES.indexOf(id) === -1) id = "home";
