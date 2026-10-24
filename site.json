@@ -52,7 +52,7 @@
       "source": "about.html",
       "page": "about",
       "title": "Our Firm | The Momentum Firm",
-      "description": "The Momentum Firm is an end-to-end management consultancy for governments, the public sector, and social impact organizations, with offices in Atlanta, Washington, D.C., Los Angeles, Houston, and New York City."
+      "description": "The Momentum Firm is an end-to-end management consultancy for governments, the public sector, and social impact organizations, with offices in Atlanta, Washington, D.C., and Los Angeles."
     },
     {
       "slug": "mission-vision-values",
@@ -80,7 +80,7 @@
       "source": "contact.html",
       "page": "contact",
       "title": "Contact Us | The Momentum Firm",
-      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., Los Angeles, Houston, and New York City. info@themomentumfirm.com, 404-895-3762."
+      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
     }
   ]
 }

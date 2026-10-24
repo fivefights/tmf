@@ -134,7 +134,6 @@ of the relevant section.
 - **Practice descriptions** for Implementation Management & Oversight and
   Program Design & Evaluation — new in the v2 website plan, which names them
   and their services but has no description copy yet.
-- **Houston and New York City** offices show "Address coming soon".
 - **Industry descriptions** on `/who-we-serve/` — the source documents list
   industry names only.
 - **Whitepaper summaries** on `/insights/` — titles are real, summaries are

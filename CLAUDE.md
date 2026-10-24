@@ -49,6 +49,7 @@ From the brand identity manual (Oigon Media, Dec 2024) and the firm brochure.
 | `--red` | `#FF0000` | buttons, eyebrow rules, active slide indicator |
 | `--red-ink` | `#D10000` | red text at small sizes **on light grounds** |
 | `--red-lift` | `#FF6A5C` | red text at small sizes **on navy or blue** |
+| `--gold` | `#DAA520` | eyebrow rule on cream and white grounds (Deep Gold, brand secondary) |
 
 The two red variants exist for contrast. Pure `#FF0000` fails WCAG AA as small
 text on both cream and navy. Use `--accent-light` (resolves to `--red-ink`) on
@@ -63,7 +64,8 @@ the copy deck's italicised words. Don't wrap heading words in `<em>`.
 Button labels render in all caps through CSS (`text-transform: uppercase` on
 `.btn`), whatever case the source uses. Change button copy, not that style.
 
-Recurring devices: the red letterspaced eyebrow with its short rule underneath,
+Recurring devices: the red letterspaced eyebrow with its short rule underneath
+(gold on cream and white, red on navy and blue; set by `--eyebrow-rule`),
 and the numbered index used for client industries. Corner radius is 4px on
 controls and cards.
 
@@ -89,6 +91,9 @@ Eleven pages: `/`, `/what-we-do/`, `/who-we-serve/`, `/insights/`,
 Section grounds alternate cream and white, and **every page closes on
 `--blue2`** before the navy footer. Careers and Contact put their form section
 on the blue instead of adding a redundant CTA after a form.
+Our Firm (`/about/`) is the exception: below its cream header, the content
+sections are all white, separated by hairline rules (`.band--ruled`), at the
+client's request.
 
 The homepage hero is a four-slide carousel (positioning, Beyond the Strategy,
 Success Measured by Impact, Talent Network). Slides share one grid cell so the
@@ -114,9 +119,7 @@ what still needs their words.
 Currently flagged: descriptions for the two new practices (Implementation
 Management & Oversight, Program Design & Evaluation), the industry
 descriptions, the Social Impact page's descriptions, the whitepaper summaries,
-and one press release with no named recipient. Houston and New York City offices show
-"Address coming soon" and are left out of the JSON-LD in `build.py` until
-their addresses are final.
+and one press release with no named recipient.
 
 Source documents, if copy questions come up: the firm brochure (v6.5), the
 website plan (v2 is current: practices, services, offices, Social Impact), and
