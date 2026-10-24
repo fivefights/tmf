@@ -116,12 +116,13 @@ and a `.draftnote` explaining it at the foot of its section. Keep that
 convention for anything written as a placeholder — it's how the client spots
 what still needs their words.
 
-Currently flagged: descriptions for the two new practices (Implementation
-Management & Oversight, Program Design & Evaluation), the industry
+Currently flagged: the capability overviews and all 21 service descriptions on
+What We Do (initial drafts from the v8 brochure), the industry
 descriptions, the Social Impact page's descriptions, the whitepaper summaries,
 and one press release with no named recipient.
 
-Source documents, if copy questions come up: the firm brochure (v6.5), the
+Source documents, if copy questions come up: the firm brochure (v8 is current;
+the final capability and service list came from the client with it), the
 website plan (v2 is current: practices, services, offices, Social Impact), and
 "The Momentum Firm Website Copy V1". The copy doc covers the
 homepage only; where it offered two options, option 2 was chosen for both.
@@ -160,6 +161,7 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 
 - Form submission. Both forms (`#contact-form`, `#talent-form`) confirm in the
   UI and send nothing. Wire them to a form service or an endpoint in `site.js`.
-- Individual insight articles and capability detail pages — those links
-  currently land on the index pages.
+- Individual insight articles and service detail pages. Capability links land
+  on anchors in `/what-we-do/` (e.g. `#enterprise-strategy-transformation`);
+  each service card has its own id too, ready for a future page.
 - Analytics.
