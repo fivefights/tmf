@@ -91,9 +91,9 @@ Eleven pages: `/`, `/what-we-do/`, `/who-we-serve/`, `/insights/`,
 Section grounds alternate cream and white, and **every page closes on
 `--blue2`** before the navy footer. Careers and Contact put their form section
 on the blue instead of adding a redundant CTA after a form.
-Our Firm (`/about/`) is the exception: below its cream header, the content
-sections are all white, separated by hairline rules (`.band--ruled`), at the
-client's request.
+Our Firm (`/about/`) and Our Mission, Vision, & Values are the exceptions:
+below their cream header, the content sections are all white, separated by
+hairline rules (`.band--ruled`), at the client's request.
 
 The homepage hero is a four-slide carousel (positioning, Beyond the Strategy,
 Success Measured by Impact, Talent Network). Slides share one grid cell so the
