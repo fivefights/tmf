@@ -10,7 +10,7 @@ Also writes sitemap.xml and a 404 page.
 
 Links inside the partials and page fragments use a {{B}} token that expands
 to the relative path back to the site root ("" on the home page, "../" one
-level down), so the built site works from any subdirectory — GitHub Pages
+level down, "../../" two levels down), so the built site works from any subdirectory — GitHub Pages
 project URLs, a staging folder, or opened straight off disk.
 """
 
@@ -78,8 +78,9 @@ def build():
         slug = page["slug"]
 
         if slug:
+            # nested slugs (what-we-do/<capability>) sit deeper, so climb further
             out = ROOT / slug / "index.html"
-            base = "../"
+            base = "../" * (slug.count("/") + 1)
             canonical = "%s/%s/" % (ORIGIN, slug)
         else:
             out = ROOT / "index.html"

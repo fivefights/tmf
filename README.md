@@ -13,7 +13,8 @@ placeholder and is marked as such both in the pages and in this file.
 ```
 .
 ├── index.html              ← built pages (committed, so GitHub Pages serves them directly)
-├── what-we-do/index.html
+├── what-we-do/index.html    ← capabilities contents list
+├── what-we-do/<capability>/index.html  ← one page per capability (5)
 ├── social-impact/index.html
 ├── who-we-serve/index.html
 ├── insights/index.html
