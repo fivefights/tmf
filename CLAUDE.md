@@ -30,7 +30,8 @@ After building, `python3 preview.py` bundles the whole site into a single
 `preview.html` for sharing a review link. It's gitignored; regenerate as needed.
 
 Links in `src/` use a `{{B}}` token for the path back to the site root. The
-build expands it (`""` at root, `"../"` one level down) so the site works from
+build expands it (`""` at root, `"../"` one level down, `"../../"` for the
+capability pages two levels down) so the site works from
 a domain root, a GitHub Pages project path, or a local folder.
 
 ---
@@ -83,7 +84,8 @@ one without first deciding what cream becomes in it.
 
 ## Page structure
 
-Eleven pages: `/`, `/what-we-do/`, `/who-we-serve/`, `/insights/`,
+Sixteen pages: `/`, `/what-we-do/` (a contents list) plus one page per capability
+at `/what-we-do/<capability>/`, `/who-we-serve/`, `/insights/`,
 `/our-founder/`, `/about/` (Our Firm, with the offices list at `#offices`),
 `/mission-vision-values/`, `/social-impact/`, `/careers/`, `/press/`,
 `/contact/`, plus `404.html`. There is no separate offices page.
@@ -161,7 +163,8 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 
 - Form submission. Both forms (`#contact-form`, `#talent-form`) confirm in the
   UI and send nothing. Wire them to a form service or an endpoint in `site.js`.
-- Individual insight articles and service detail pages. Capability links land
-  on anchors in `/what-we-do/` (e.g. `#enterprise-strategy-transformation`);
-  each service card has its own id too, ready for a future page.
+- Individual insight articles and service detail pages. Each capability has its
+  own page with prev/next pagination (capability 05 hands off to Who We Serve);
+  service cards carry ids (`#strategic-planning`, …) ready for future pages.
+  Capability page sources live in `src/pages/what-we-do/`.
 - Analytics.

@@ -20,6 +20,41 @@
       "description": "Public-sector consulting for state and local government: enterprise strategy and transformation, analytics and operational intelligence, program and implementation management, organizational change management, and innovation and digital experience."
     },
     {
+      "slug": "what-we-do/enterprise-strategy-transformation",
+      "source": "what-we-do/enterprise-strategy-transformation.html",
+      "page": "what-we-do",
+      "title": "Enterprise Strategy & Transformation | The Momentum Firm",
+      "description": "Ambitious vision turned into roadmaps, structures, budgets, and governance that deliver. Public-sector consulting services: Strategic Planning, Organizational Assessments, Organizational Design, Outcome-Based Budgeting, Enterprise Governance."
+    },
+    {
+      "slug": "what-we-do/analytics-operational-intelligence",
+      "source": "what-we-do/analytics-operational-intelligence.html",
+      "page": "what-we-do",
+      "title": "Analytics & Operational Intelligence | The Momentum Firm",
+      "description": "Siloed data turned into governed, decision-ready insight leaders can act on. Public-sector consulting services: Performance Dashboards & Monitoring, Enterprise Data Strategy & Readiness, AI & Self-Service Analytics."
+    },
+    {
+      "slug": "what-we-do/program-implementation-management",
+      "source": "what-we-do/program-implementation-management.html",
+      "page": "what-we-do",
+      "title": "Program & Implementation Management | The Momentum Firm",
+      "description": "Client-side leadership that keeps major initiatives and technology rollouts on track. Public-sector consulting services: Major Initiative Management, Technology Implementation Oversight, PMO Setup & Support."
+    },
+    {
+      "slug": "what-we-do/organizational-change-management",
+      "source": "what-we-do/organizational-change-management.html",
+      "page": "what-we-do",
+      "title": "Organizational Change Management | The Momentum Firm",
+      "description": "Buy-in, leadership alignment, and the support teams need to adopt new ways of working. Public-sector consulting services: Leadership & Administration Transitions, Change Planning & Execution, Training & Adoption Support, Stakeholder & Community Engagement."
+    },
+    {
+      "slug": "what-we-do/innovation-digital-experience",
+      "source": "what-we-do/innovation-digital-experience.html",
+      "page": "what-we-do",
+      "title": "Innovation & Digital Experience | The Momentum Firm",
+      "description": "Digital products and services researched, designed, and built around the people who use them. Public-sector digital services: Product Strategy & Service Design, User Research & Usability Testing, Web & Mobile Product Design, Design Systems & Accessibility, Web Application Development, Workflow Digitization & AI Automation."
+    },
+    {
       "slug": "social-impact",
       "source": "social-impact.html",
       "page": "social-impact",

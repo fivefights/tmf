@@ -43,7 +43,7 @@ def inline_images(html):
 
 def to_hash_links(html):
     """Real URLs become hash routes so one file can serve every page."""
-    html = re.sub(r'href="([a-z0-9\-]+)/"', r'href="#/\1"', html)
+    html = re.sub(r'href="([a-z0-9\-/]+?)/"', r'href="#/\1"', html)
     html = re.sub(r'href=""', 'href="#/home"', html)
     return html
 
@@ -69,7 +69,8 @@ ROUTER = """
     document.body.setAttribute("data-page", id);
     document.querySelectorAll(".navbtn").forEach(function(b){
       var key = b.getAttribute("data-menu") || (b.getAttribute("href")||"").replace("#/","");
-      var on = (key === NAV_FOR[id] || key === id);
+      var section = NAV_FOR[id] || NAV_FOR[id.split("/")[0]];
+      var on = (key === section || key === id);
       b.classList.toggle("is-current", on);
       if (on) b.setAttribute("aria-current","page"); else b.removeAttribute("aria-current");
     });

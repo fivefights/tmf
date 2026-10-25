@@ -446,6 +446,44 @@ section[id]{scroll-margin-top:110px}
 }
 .svc p{font-size:.93rem;color:var(--page-muted)}
 
+/* capability pages: back link, and prev/next pagination at the foot */
+.crumb{
+  display:inline-flex;gap:6px;margin-bottom:22px;text-decoration:none;
+  font-family:"Montserrat",sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soft-muted);
+}
+.crumb:hover{color:var(--accent-light)}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px)}
+.pager-card{
+  display:grid;gap:10px;align-content:center;padding:clamp(22px,2.8vw,34px);border-radius:4px;
+  border:1px solid var(--rule-strong);text-decoration:none;color:var(--page-fg);
+  transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+.pager-card:hover{border-color:var(--navy);box-shadow:var(--shadow);transform:translateY(-2px)}
+.pager-next{text-align:right;background:var(--navy);border-color:var(--navy);color:#fff}
+.pager-k{
+  font-family:"Montserrat",sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent-light);
+}
+.pager-next .pager-k{color:var(--accent-dark)}
+.pager-t{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(1.12rem,2vw,1.45rem);line-height:1.2}
+.pager-card .arw{display:inline-block;transition:transform .2s ease}
+.pager-prev:hover .arw{transform:translateX(-3px)}
+.pager-next:hover .arw{transform:translateX(3px)}
+.pager-steps{display:flex;justify-content:center;gap:8px;list-style:none;margin:clamp(22px,2.6vw,30px) 0 0;padding:0}
+.pager-steps a{
+  display:grid;place-items:center;width:40px;height:40px;border-radius:4px;border:1px solid var(--rule-strong);
+  font-family:"Montserrat",sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.06em;
+  color:var(--page-fg);text-decoration:none;
+}
+.pager-steps a:hover{border-color:var(--navy)}
+.pager-steps a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media (prefers-reduced-motion:reduce){.pager-card,.pager-card .arw{transition:none}.pager-card:hover{transform:none}}
+@media (max-width:620px){.pager{grid-template-columns:1fr}.pager-next{order:-1}}
+
+/* What We Do contents: services listed under each capability row */
+.toc-svcs{display:block;margin-top:8px;font-size:.84rem;color:var(--page-muted)}
+
 /* values */
 .values{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(max(260px,calc(33.333% - 20px)),1fr));
