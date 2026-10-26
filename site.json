@@ -69,6 +69,55 @@
       "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, and public health."
     },
     {
+      "slug": "who-we-serve/state-local-governments",
+      "source": "who-we-serve/state-local-governments.html",
+      "page": "who-we-serve",
+      "title": "State & Local Governments | The Momentum Firm",
+      "description": "Cities, counties, and states deliver the services residents feel every day. We help their leaders turn ambitious agendas into operations, programs, and digital services that work, and show the results."
+    },
+    {
+      "slug": "who-we-serve/federal-government",
+      "source": "who-we-serve/federal-government.html",
+      "page": "who-we-serve",
+      "title": "Federal Government | The Momentum Firm",
+      "description": "Federal agencies deliver missions at national scale under intense scrutiny. We help them modernize programs, technology, and operations while keeping the mission on track."
+    },
+    {
+      "slug": "who-we-serve/intergovernmental-organizations",
+      "source": "who-we-serve/intergovernmental-organizations.html",
+      "page": "who-we-serve",
+      "title": "Intergovernmental Organizations | The Momentum Firm",
+      "description": "Multilateral bodies, regional councils, and international organizations bring many governments to one table. We help them align priorities, govern shared programs, and deliver across borders."
+    },
+    {
+      "slug": "who-we-serve/k-12-schools",
+      "source": "who-we-serve/k-12-schools.html",
+      "page": "who-we-serve",
+      "title": "K-12 Schools | The Momentum Firm",
+      "description": "School districts and charter networks shape the future of every community they serve. We help district leaders strengthen operations, use data well, and lead change that reaches the classroom."
+    },
+    {
+      "slug": "who-we-serve/higher-education",
+      "source": "who-we-serve/higher-education.html",
+      "page": "who-we-serve",
+      "title": "Higher Education | The Momentum Firm",
+      "description": "Colleges, universities, and systems are rethinking how they operate in a changing landscape. We help them strengthen institutional performance, modernize the student experience, and lead change on campus."
+    },
+    {
+      "slug": "who-we-serve/nonprofits",
+      "source": "who-we-serve/nonprofits.html",
+      "page": "who-we-serve",
+      "title": "Nonprofits | The Momentum Firm",
+      "description": "Mission-driven organizations work on the front line of community needs. We help nonprofits strengthen operations, prove their impact, and grow without losing sight of the people they serve."
+    },
+    {
+      "slug": "who-we-serve/public-health",
+      "source": "who-we-serve/public-health.html",
+      "page": "who-we-serve",
+      "title": "Public Health | The Momentum Firm",
+      "description": "Health departments and public health agencies protect entire communities. We help them deliver programs, use data to act faster, and build the workforce and systems to meet the next challenge."
+    },
+    {
       "slug": "insights",
       "source": "insights.html",
       "page": "insights",

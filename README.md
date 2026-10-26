@@ -16,7 +16,8 @@ placeholder and is marked as such both in the pages and in this file.
 ├── what-we-do/index.html    ← capabilities contents list
 ├── what-we-do/<capability>/index.html  ← one page per capability (5)
 ├── social-impact/index.html
-├── who-we-serve/index.html
+├── who-we-serve/index.html  ← industries contents list
+├── who-we-serve/<industry>/index.html  ← one page per industry (7)
 ├── insights/index.html
 ├── our-founder/index.html
 ├── about/index.html        ← Our Firm, offices list at the bottom
