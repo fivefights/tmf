@@ -31,7 +31,7 @@ After building, `python3 preview.py` bundles the whole site into a single
 
 Links in `src/` use a `{{B}}` token for the path back to the site root. The
 build expands it (`""` at root, `"../"` one level down, `"../../"` for the
-capability pages two levels down) so the site works from
+capability and industry pages two levels down) so the site works from
 a domain root, a GitHub Pages project path, or a local folder.
 
 ---
@@ -84,8 +84,9 @@ one without first deciding what cream becomes in it.
 
 ## Page structure
 
-Sixteen pages: `/`, `/what-we-do/` (a contents list) plus one page per capability
-at `/what-we-do/<capability>/`, `/who-we-serve/`, `/insights/`,
+Twenty-three pages: `/`, `/what-we-do/` (a contents list) plus one page per
+capability at `/what-we-do/<capability>/`, `/who-we-serve/` (a contents list)
+plus one page per industry at `/who-we-serve/<industry>/`, `/insights/`,
 `/our-founder/`, `/about/` (Our Firm, with the offices list at `#offices`),
 `/mission-vision-values/`, `/social-impact/`, `/careers/`, `/press/`,
 `/contact/`, plus `404.html`. There is no separate offices page.
@@ -120,7 +121,7 @@ what still needs their words.
 
 Currently flagged: the capability overviews and all 21 service descriptions on
 What We Do (initial drafts from the v8 brochure), the industry
-descriptions, the Social Impact page's descriptions, the whitepaper summaries,
+descriptions and industry pages, the Social Impact page's descriptions, the whitepaper summaries,
 and one press release with no named recipient.
 
 Source documents, if copy questions come up: the firm brochure (v8 is current;
@@ -166,5 +167,8 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 - Individual insight articles and service detail pages. Each capability has its
   own page with prev/next pagination (capability 05 hands off to Who We Serve);
   service cards carry ids (`#strategic-planning`, …) ready for future pages.
-  Capability page sources live in `src/pages/what-we-do/`.
+  Capability page sources live in `src/pages/what-we-do/`. Industry pages
+  follow the same pattern in `src/pages/who-we-serve/` (industry 07 hands off
+  to Insights); their heroes show the rising-bars motif until each industry
+  photo lands at `assets/img/industry-<industry>.jpg`.
 - Analytics.

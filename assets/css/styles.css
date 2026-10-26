@@ -483,6 +483,15 @@ section[id]{scroll-margin-top:110px}
 @media (prefers-reduced-motion:reduce){.pager-card,.pager-card .arw{transition:none}.pager-card:hover{transform:none}}
 @media (max-width:620px){.pager{grid-template-columns:1fr}.pager-next{order:-1}}
 
+/* industry pages: four focus cards sit two across */
+.svc-grid--two{grid-template-columns:repeat(auto-fit,minmax(max(280px,calc(50% - 14px)),1fr))}
+/* industry hero until its photo arrives: the rising-bars motif in a photo-sized panel */
+.pagehead-img--pending{
+  aspect-ratio:4/3;border-radius:4px;background:var(--cream-deep);
+  display:flex;align-items:flex-end;padding:clamp(24px,4vw,48px);
+}
+.pagehead-img--pending .hero-motif{display:flex;width:86%;height:78%;margin:0;order:0} /* room for the bars' slant */
+
 /* What We Do contents: services listed under each capability row */
 .toc-svcs{display:block;margin-top:8px;font-size:.84rem;color:var(--page-muted)}
 
