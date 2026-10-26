@@ -169,6 +169,9 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
   service cards carry ids (`#strategic-planning`, …) ready for future pages.
   Capability page sources live in `src/pages/what-we-do/`. Industry pages
   follow the same pattern in `src/pages/who-we-serve/` (industry 07 hands off
-  to Insights); their heroes show the rising-bars motif until each industry
-  photo lands at `assets/img/industry-<industry>.jpg`.
+  to Insights).
+  Each industry hero photo lives at `assets/img/industry-<industry>.jpg`
+  (4:3, 1200x900); to change one, replace that file under the same name.
+  `.pagehead-img--pending` (the rising-bars motif) is the fallback styling
+  for a hero with no photo yet.
 - Analytics.
