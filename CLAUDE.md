@@ -65,6 +65,10 @@ the copy deck's italicised words. Don't wrap heading words in `<em>`.
 Button labels render in all caps through CSS (`text-transform: uppercase` on
 `.btn`), whatever case the source uses. Change button copy, not that style.
 
+Buttons in main content sections are primary red (`.btn--red`). The CTA in
+each page's closing blue band is the white outline (`.btn--ghost-light`).
+Form submit buttons on the blue stay red.
+
 Recurring devices: the red letterspaced eyebrow with its short rule underneath
 (gold on cream and white, red on navy and blue; set by `--eyebrow-rule`),
 and the numbered index used for client industries. Corner radius is 4px on
