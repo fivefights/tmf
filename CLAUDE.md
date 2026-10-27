@@ -162,8 +162,10 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 
 ## Not built yet
 
-- Form submission. Both forms (`#contact-form`, `#talent-form`) confirm in the
-  UI and send nothing. Wire them to a form service or an endpoint in `site.js`.
+- Form submission. Both forms (`#contact-form`, `#talent-form`) validate in
+  the browser (every field required, email format, 500-character message
+  boxes with a live counter), then confirm in the UI and send nothing. Wire
+  the success branch in `site.js` to a form service or endpoint.
 - Individual insight articles and service detail pages. Each capability has its
   own page with prev/next pagination (capability 05 hands off to Who We Serve);
   service cards carry ids (`#strategic-planning`, …) ready for future pages.

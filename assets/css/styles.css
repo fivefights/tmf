@@ -496,13 +496,24 @@ section[id]{scroll-margin-top:110px}
 .toc-svcs{display:block;margin-top:8px;font-size:.84rem;color:var(--page-muted)}
 
 /* values */
-.values{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(max(260px,calc(33.333% - 20px)),1fr));
+/* one-word value tags (Careers) */
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
+.value{
+  border:1px solid var(--rule-strong);padding:16px 18px;border-radius:4px;
+  font-family:"Montserrat",sans-serif;font-weight:700;font-size:.8rem;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+/* values with definitions (Mission, Vision, & Values) */
+.values--defined{
+  grid-template-columns:repeat(auto-fit,minmax(max(260px,calc(33.333% - 20px)),1fr));
   gap:clamp(18px,2vw,26px);margin-top:clamp(26px,3vw,36px);
 }
-.value{border:1px solid var(--rule-strong);border-top:4px solid var(--eyebrow-rule);padding:clamp(22px,2.4vw,28px);border-radius:4px;display:grid;gap:10px;align-content:start}
-.value h3{font-size:1.15rem}
-.value p{font-size:.95rem;color:var(--page-muted)}
+.values--defined .value{
+  border-top:4px solid var(--eyebrow-rule);padding:clamp(22px,2.4vw,28px);display:grid;gap:10px;align-content:start;
+  font-family:inherit;font-weight:inherit;font-size:inherit;letter-spacing:normal;text-transform:none;
+}
+.values--defined .value h3{font-size:1.15rem}
+.values--defined .value p{font-size:.95rem;color:var(--page-muted)}
 .band--strong .value{border-color:rgba(250,242,223,.28)}
 
 /* ============================================================
@@ -551,14 +562,27 @@ form{display:grid;gap:18px}
 }
 .field input,.field select,.field textarea{
   font-family:"Rubik",sans-serif;font-size:.97rem;font-weight:400;
-  padding:13px 14px;border:1px solid var(--rule-strong);background:var(--card-bg);
+  padding:13px 14px;border:1px solid var(--rule-strong);background-color:var(--card-bg);
   color:var(--page-fg);width:100%;border-radius:4px;
 }
-.band--soft .field input,.band--soft .field select,.band--soft .field textarea{background:var(--paper)}
+/* custom caret: 16px navy chevron, inset 16px from the right edge */
+.field select{
+  -webkit-appearance:none;appearance:none;cursor:pointer;
+  padding-right:48px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2300254A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;background-size:16px 16px;
+}
+.band--soft .field input,.band--soft .field select,.band--soft .field textarea{background-color:var(--paper)}
 .field textarea{min-height:130px;resize:vertical}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media (max-width:560px){.field-row{grid-template-columns:1fr}}
 .formnote{font-size:.84rem;color:var(--soft-muted)}
+/* validation: message under the field, red outline on the field itself */
+.field-error{font-size:.84rem;font-weight:500;color:var(--accent-light)}
+.band--blue .field-error{color:var(--accent-dark)}
+.field [aria-invalid="true"],.band--blue .field [aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 2px var(--red)}
+.field-count{font-size:.78rem;color:var(--soft-muted);justify-self:end}
+.band--blue .field-count{color:var(--strong-muted)}
 .formdone{
   display:none;border-left:4px solid var(--red);padding:14px 18px;
   background:var(--card-bg);font-size:.93rem;
@@ -787,7 +811,7 @@ form{display:grid;gap:18px}
 .band--blue .field input,
 .band--blue .field select,
 .band--blue .field textarea{
-  background:var(--paper);color:var(--navy);border-color:transparent;
+  background-color:var(--paper);color:var(--navy);border-color:transparent;
 }
 .band--blue .field input::placeholder,
 .band--blue .field textarea::placeholder{color:#7d8fa3}
