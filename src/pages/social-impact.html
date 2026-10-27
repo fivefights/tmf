@@ -13,7 +13,6 @@
         <span class="subhead">Corporate Giving</span>
         <h3>Our Giving Pillars</h3>
         <p>We award cash grants to nonprofits making a measurable difference in two areas we care about most: social innovation and economic empowerment.<span class="draft">*</span></p>
-        <div class="cta-row"><a class="btn btn--ghost-light" href="{{B}}contact/">Request Community Grant</a></div>
       </div>
       <ul>
         <li>Social Innovation</li>
@@ -21,16 +20,73 @@
       </ul>
     </article>
 
-    <p class="draftnote"><span class="draft" style="vertical-align:baseline">*</span> Draft copy. Headings, giving pillars, and the button label come from the website plan (v2); the marked descriptions are written from its notes and await the client's words.</p>
+    <p class="draftnote"><span class="draft" style="vertical-align:baseline">*</span> Draft copy. Headings and giving pillars come from the website plan (v2); the marked descriptions are written from its notes and await the client's words.</p>
   </div>
 </section>
 
-<section class="band band--blue">
-  <div class="wrap cta-band">
+<section class="band band--blue" id="community-support">
+  <div class="wrap contact-grid">
     <div>
-      <span class="eyebrow">Next</span>
-      <h2>Talk to us about partnering for impact.</h2>
+      <span class="eyebrow">Corporate Giving</span>
+      <h2 style="margin-bottom:18px">Request Community Support</h2>
+      <p class="lede">Tell us about your organization and the need you're working to meet. We review every request against our giving pillars, social innovation and economic empowerment, in the cities where we work.<span class="draft">*</span></p>
     </div>
-    <div><a class="btn btn--red" href="{{B}}contact/">Contact us</a></div>
+
+    <form id="support-form" novalidate>
+      <input type="hidden" name="category" value="Request for Community Support">
+      <div class="field-row">
+        <div class="field">
+          <label for="s-name">Name</label>
+          <input id="s-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="s-email">Email</label>
+          <input id="s-email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="s-org">Organization</label>
+          <input id="s-org" name="org" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="s-orgtype">Organization type</label>
+          <select id="s-orgtype" name="org_type" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option>Nonprofit</option>
+            <option>Educational Institution</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="s-revenue">Annual revenue</label>
+          <select id="s-revenue" name="revenue" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option>$0&ndash;$250K</option>
+            <option>$250K&ndash;$500K</option>
+            <option>$500K&ndash;$750K</option>
+            <option>$750K&ndash;$1M</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="s-location">Location</label>
+          <select id="s-location" name="location" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option>Atlanta</option>
+            <option>Washington, D.C.</option>
+            <option>Los Angeles</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="s-need">Tell us about the need</label>
+        <textarea id="s-need" name="need" maxlength="500" required aria-describedby="s-need-count"></textarea>
+        <p class="field-count" id="s-need-count" aria-live="polite">0 / 500 characters</p>
+      </div>
+      <button class="btn btn--red" type="submit">Submit request</button>
+      <p class="formnote">All fields are required. Prototype form &mdash; nothing is sent or stored yet.</p>
+      <p class="formdone" id="support-done">Thanks &mdash; in the live site this would reach info@themomentumfirm.com as a Request for Community Support. Nothing was submitted from the prototype.</p>
+    </form>
   </div>
 </section>
