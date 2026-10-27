@@ -224,11 +224,15 @@
      Every field is required; email fields must look like an
      address. Errors show under each field and clear as the
      visitor fixes them. Message boxes count toward 500 characters.
+     All three forms go to one inbox; each carries a hidden
+     "category" field (General Inquiry, Talent Network Inquiry,
+     Request for Community Support) that becomes the subject.
      Prototype behaviour only — no endpoint is wired up yet.
-     Replace the success branch with a real POST (or point the
-     <form> at a form service) when the backend is chosen.
+     Send `submission` from the success branch to a form service
+     or endpoint when the backend is chosen.
      ---------------------------------------------------------- */
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var INBOX = "info@themomentumfirm.com";
 
   function problem(el) {
     var v = (el.value || "").trim();
@@ -260,11 +264,11 @@
     else el.removeAttribute("aria-describedby");
   }
 
-  [["talent-form", "talent-done"], ["contact-form", "contact-done"]].forEach(function (pair) {
+  [["talent-form", "talent-done"], ["contact-form", "contact-done"], ["support-form", "support-done"]].forEach(function (pair) {
     var f = document.getElementById(pair[0]);
     var d = document.getElementById(pair[1]);
     if (!f || !d) return;
-    var fields = Array.prototype.slice.call(f.querySelectorAll("input, select, textarea"));
+    var fields = Array.prototype.slice.call(f.querySelectorAll("input:not([type=hidden]), select, textarea"));
 
     fields.forEach(function (el) {
       var count = el.maxLength > 0 && document.getElementById(el.id + "-count");
@@ -289,6 +293,10 @@
         first.focus();
         return;
       }
+      var data = new FormData(f);
+      var submission = { to: INBOX, subject: data.get("category"), fields: {} };
+      data.forEach(function (value, key) { if (key !== "category") submission.fields[key] = value; });
+      // TODO: send `submission` to the chosen form service or endpoint.
       d.classList.add("show");
       d.scrollIntoView({ block: "nearest", behavior: "smooth" });
     });

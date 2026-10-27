@@ -92,7 +92,7 @@ plus one page per industry at `/who-we-serve/<industry>/`, `/insights/`,
 `/contact/`, plus `404.html`. There is no separate offices page.
 
 Section grounds alternate cream and white, and **every page closes on
-`--blue2`** before the navy footer. Careers and Contact put their form section
+`--blue2`** before the navy footer. Careers, Contact and Social Impact put their form section
 on the blue instead of adding a redundant CTA after a form.
 Our Firm (`/about/`) and Our Mission, Vision, & Values are the exceptions:
 below their cream header, the content sections are all white, separated by
@@ -106,7 +106,7 @@ never starts under `prefers-reduced-motion`.
 
 Navigation: What We Do, Who We Serve, Insights (Mindful Momentum + Press), About
 (Our Founder, Our Firm, Our Mission, Vision, & Values, Social Impact),
-Careers, plus a red Contact Us button. All nav labels are title case.
+Careers, plus a red Contact Us button. All nav labels and form dropdown options are title case.
 Buttons carry no arrow and centre their labels; arrows stay on text links,
 index rows, and the carousel controls, where they indicate direction.
 
@@ -162,10 +162,13 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 
 ## Not built yet
 
-- Form submission. Both forms (`#contact-form`, `#talent-form`) validate in
-  the browser (every field required, email format, 500-character message
-  boxes with a live counter), then confirm in the UI and send nothing. Wire
-  the success branch in `site.js` to a form service or endpoint.
+- Form submission. Three forms (`#contact-form`, `#talent-form`, and
+  `#support-form` on Social Impact) validate in the browser (every field
+  required, email format, 500-character message boxes with a live counter),
+  then confirm in the UI and send nothing. All go to info@themomentumfirm.com;
+  a hidden `category` field (General Inquiry, Talent Network Inquiry, Request
+  for Community Support) becomes the subject. Wire the `submission` object in
+  `site.js`'s success branch to a form service or endpoint.
 - Individual insight articles and service detail pages. Each capability has its
   own page with prev/next pagination (capability 05 hands off to Who We Serve);
   service cards carry ids (`#strategic-planning`, …) ready for future pages.
