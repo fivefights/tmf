@@ -277,8 +277,9 @@
           <input id="t-email" name="email" type="email" autocomplete="email" required>
         </div>
         <div class="field">
-          <label for="t-area">Area of practice</label>
-          <select id="t-area" name="area">
+          <label for="t-area">Primary area of practice</label>
+          <select id="t-area" name="area" required>
+            <option value="" disabled selected>Select an option</option>
             <option>Enterprise Strategy &amp; Transformation</option>
             <option>Analytics &amp; Operational Intelligence</option>
             <option>Program &amp; Implementation Management</option>
@@ -288,14 +289,15 @@
         </div>
         <div class="field">
           <label for="t-link">LinkedIn or portfolio</label>
-          <input id="t-link" name="link" type="url" placeholder="https://">
+          <input id="t-link" name="link" type="url" placeholder="https://" required>
         </div>
         <div class="field">
           <label for="t-note">Tell us about your public sector experience</label>
-          <textarea id="t-note" name="note"></textarea>
+          <textarea id="t-note" name="note" maxlength="500" required aria-describedby="t-note-count"></textarea>
+          <p class="field-count" id="t-note-count" aria-live="polite">0 / 500 characters</p>
         </div>
         <button class="btn btn--red" type="submit">Join the network</button>
-        <p class="formnote">Prototype form — nothing is sent or stored yet.</p>
+        <p class="formnote">All fields are required. Prototype form — nothing is sent or stored yet.</p>
         <p class="formdone" id="talent-done">Thanks — in the live site this would go to the talent network inbox. Nothing was submitted from the prototype.</p>
       </form>
     </div>

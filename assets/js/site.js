@@ -221,16 +221,74 @@
 
   /* ----------------------------------------------------------
      Forms
+     Every field is required; email fields must look like an
+     address. Errors show under each field and clear as the
+     visitor fixes them. Message boxes count toward 500 characters.
      Prototype behaviour only — no endpoint is wired up yet.
-     Replace the submit handler with a real POST (or point the
+     Replace the success branch with a real POST (or point the
      <form> at a form service) when the backend is chosen.
      ---------------------------------------------------------- */
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function problem(el) {
+    var v = (el.value || "").trim();
+    if (!v) return el.tagName === "SELECT" ? "Please choose an option." : "Please fill in this field.";
+    if (el.type === "email" && !EMAIL.test(v)) return "Enter a valid email address, like name@example.com.";
+    if (el.maxLength > 0 && v.length > el.maxLength) return "Keep this under " + el.maxLength + " characters.";
+    return "";
+  }
+
+  function setError(el, msg) {
+    var id = el.id + "-error";
+    var box = document.getElementById(id);
+    var described = (el.getAttribute("aria-describedby") || "").split(" ").filter(function (x) { return x && x !== id; });
+    if (msg) {
+      if (!box) {
+        box = document.createElement("p");
+        box.className = "field-error";
+        box.id = id;
+        el.closest(".field").appendChild(box);
+      }
+      box.textContent = msg;
+      el.setAttribute("aria-invalid", "true");
+      described.push(id);
+    } else {
+      if (box) box.remove();
+      el.removeAttribute("aria-invalid");
+    }
+    if (described.length) el.setAttribute("aria-describedby", described.join(" "));
+    else el.removeAttribute("aria-describedby");
+  }
+
   [["talent-form", "talent-done"], ["contact-form", "contact-done"]].forEach(function (pair) {
     var f = document.getElementById(pair[0]);
     var d = document.getElementById(pair[1]);
     if (!f || !d) return;
+    var fields = Array.prototype.slice.call(f.querySelectorAll("input, select, textarea"));
+
+    fields.forEach(function (el) {
+      var count = el.maxLength > 0 && document.getElementById(el.id + "-count");
+      function update() {
+        if (count) count.textContent = el.value.length + " / " + el.maxLength + " characters";
+        if (el.getAttribute("aria-invalid") === "true") setError(el, problem(el));
+      }
+      el.addEventListener("input", update);
+      el.addEventListener("change", update);
+    });
+
     f.addEventListener("submit", function (e) {
       e.preventDefault();
+      var first = null;
+      fields.forEach(function (el) {
+        var msg = problem(el);
+        setError(el, msg);
+        if (msg && !first) first = el;
+      });
+      if (first) {
+        d.classList.remove("show");
+        first.focus();
+        return;
+      }
       d.classList.add("show");
       d.scrollIntoView({ block: "nearest", behavior: "smooth" });
     });
