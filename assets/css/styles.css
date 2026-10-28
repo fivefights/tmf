@@ -19,6 +19,7 @@
   --red:#FF0000;
   --red-ink:#D10000;      /* red for small text on light grounds */
   --red-lift:#FF6A5C;     /* red for small text on navy grounds */
+  --gold-lift:#F7D58B;    /* eyebrow text on navy and blue grounds */
   --gold:#DAA520;         /* brand secondary: Deep Gold */
   --eyebrow-rule:var(--gold); /* gold on cream and white; red on navy/blue (below) */
   --paper:#FFFFFF;
@@ -108,7 +109,7 @@ button{font:inherit;color:inherit}
   margin:0 0 14px;
   display:block;
 }
-.band--strong .eyebrow,.hero .eyebrow,.footer .eyebrow{color:var(--accent-dark)}
+.band--strong .eyebrow,.hero .eyebrow,.footer .eyebrow{color:var(--gold-lift)}
 .eyebrow::after{
   content:"";display:block;width:34px;height:4px;background:var(--eyebrow-rule);margin-top:10px;
 }
@@ -205,7 +206,7 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   border-top:3px solid var(--red);
   box-shadow:0 22px 44px -30px rgba(0,0,0,.7);
 }
-.mega .eyebrow,.mega .tlink{color:var(--accent-dark)}
+.mega .eyebrow,.mega .tlink{color:var(--gold-lift)}
 .mega-inner{
   width:100%;max-width:var(--maxw);margin-inline:auto;padding:38px var(--gutter) 42px;
   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:clamp(28px,5vw,64px);
@@ -218,13 +219,13 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
   font-size:.95rem;line-height:1.3;padding-bottom:10px;margin-bottom:10px;
   border-bottom:1px solid rgba(250,242,223,.25);
 }
-.mega-col>a.mega-h:hover{color:var(--accent-dark)}
+.mega-col>a.mega-h:hover{color:var(--gold-lift)}
 .mega-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .mega-col li a{
   text-decoration:none;font-size:.88rem;font-weight:400;color:var(--blue2-muted);
   display:inline-flex;gap:7px;
 }
-.mega-col li a:hover{color:var(--accent-dark)}
+.mega-col li a:hover{color:var(--gold-lift)}
 @media (max-width:1080px){.mainnav{display:none}}
 
 /* mobile */
@@ -253,6 +254,11 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 .drawer details[open] summary::after{content:"–"}
 .drawer details ul{list-style:none;margin:0;padding:0 0 16px;display:grid;gap:10px}
 .drawer details ul a{text-decoration:none;font-size:.92rem;color:var(--blue2-muted)}
+/* "All …" link closing a section, matching the mega menu's gold text link */
+.drawer details .drawer-all{margin-top:4px}
+.drawer details .drawer-all a{
+  display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat",sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-lift);
+}
 .drawer .flat{
   display:block;padding:15px 0;border-bottom:1px solid rgba(250,242,223,.2);text-decoration:none;
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:.9rem;
@@ -494,6 +500,19 @@ section[id]{scroll-margin-top:110px}
 
 /* What We Do contents: services listed under each capability row */
 .toc-svcs{display:block;margin-top:8px;font-size:.84rem;color:var(--page-muted)}
+/* What We Do contents: large capability descriptions, services set apart under a labelled hairline */
+.index-list--caps a{padding-block:26px}
+.index-list--caps .t{font-size:clamp(1.4rem,2.2vw,1.75rem);line-height:1.25}
+.index-list--caps .d{
+  font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.5;color:var(--navy);margin-top:8px;max-width:64ch;text-wrap:balance;
+}
+.index-list--caps .toc-svcs{
+  font-size:.82rem;line-height:1.6;text-wrap:wrap;border-top:1px solid var(--rule);padding-top:12px;margin-top:14px;
+}
+.index-list--caps .toc-svcs::before{
+  content:"Services";display:block;margin-bottom:5px;font-family:"Montserrat",sans-serif;font-weight:700;
+  font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-light);
+}
 
 /* values */
 /* one-word value tags (Careers) */
@@ -604,7 +623,7 @@ form{display:grid;gap:18px}
 .foot-brand p{font-size:.9rem;color:#9DB4CB;max-width:34ch}
 .foot-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px 30px}
 .foot-cols h4{
-  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lift);margin-bottom:14px;
+  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:14px;
 }
 .foot-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 .foot-cols a{font-size:.88rem;color:#C2D2E2;text-decoration:none}
@@ -713,7 +732,7 @@ form{display:grid;gap:18px}
 }
 
 /* footer tagline + pending link */
-.foot-brand .eyebrow{color:var(--red-lift);margin-top:4px}
+.foot-brand .eyebrow{color:var(--gold-lift);margin-top:4px}
 .foot-brand .tagline{
   font-family:"Montserrat",sans-serif;font-weight:700;font-size:1.02rem;
   line-height:1.35;color:#fff;max-width:26ch;
@@ -793,7 +812,8 @@ form{display:grid;gap:18px}
    ============================================================ */
 .band--blue{background:var(--blue2);color:#fff}
 .band--blue h2,.band--blue h3,.band--blue .cta-band h2,.band--blue .final h2{color:#fff}
-.band--blue .eyebrow,.band--blue .tlink,.band--blue .dl .k{color:var(--accent-dark)}
+.band--blue .eyebrow,.band--blue .dl .k{color:var(--gold-lift)}
+.band--blue .tlink{color:var(--accent-dark)}
 .band--blue .lede,
 .band--blue .section-head p,
 .band--blue .prose p,

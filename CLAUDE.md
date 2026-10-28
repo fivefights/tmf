@@ -51,6 +51,10 @@ From the brand identity manual (Oigon Media, Dec 2024) and the firm brochure.
 | `--red-ink` | `#D10000` | red text at small sizes **on light grounds** |
 | `--red-lift` | `#FF6A5C` | red text at small sizes **on navy or blue** |
 | `--gold` | `#DAA520` | eyebrow rule on cream and white grounds (Deep Gold, brand secondary) |
+| `--gold-lift` | `#F7D58B` | eyebrow text on navy and blue grounds (hero, blue bands, mega menus, footer headings) |
+
+Eyebrow *text* on navy and blue is `--gold-lift`; the short rule under it stays
+red there. Red text links on dark grounds still use `--accent-dark`.
 
 The two red variants exist for contrast. Pure `#FF0000` fails WCAG AA as small
 text on both cream and navy. Use `--accent-light` (resolves to `--red-ink`) on
