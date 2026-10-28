@@ -9,15 +9,17 @@
       "source": "index.html",
       "page": "home",
       "title": "The Momentum Firm | Public-Sector Consulting",
-      "description": "Public-sector consulting that helps government, education, and nonprofit organizations move ambitious priorities from paper to practice \u2014 improving how they operate, deliver, and serve.",
-      "jsonld": true
+      "description": "An end-to-end management consultancy helping public sector and social impact organizations imagine more and deliver better.",
+      "jsonld": true,
+      "share": "home"
     },
     {
       "slug": "what-we-do",
       "source": "what-we-do.html",
       "page": "what-we-do",
       "title": "Capabilities & Services | The Momentum Firm",
-      "description": "Public-sector consulting for state and local government: enterprise strategy and transformation, analytics and operational intelligence, program and implementation management, organizational change management, and innovation and digital experience."
+      "description": "Public-sector consulting for state and local government: enterprise strategy and transformation, analytics and operational intelligence, program and implementation management, organizational change management, and innovation and digital experience.",
+      "share": "what-we-do"
     },
     {
       "slug": "what-we-do/enterprise-strategy-transformation",
@@ -66,56 +68,64 @@
       "source": "who-we-serve.html",
       "page": "who-we-serve",
       "title": "Client Industries | The Momentum Firm",
-      "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, and public health."
+      "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, and public health.",
+      "share": "who-we-serve"
     },
     {
       "slug": "who-we-serve/state-local-governments",
       "source": "who-we-serve/state-local-governments.html",
       "page": "who-we-serve",
       "title": "State & Local Governments | The Momentum Firm",
-      "description": "Cities, counties, and states deliver the services residents feel every day. We help their leaders turn ambitious agendas into operations, programs, and digital services that work, and show the results."
+      "description": "Cities, counties, and states deliver the services residents feel every day. We help their leaders turn ambitious agendas into operations, programs, and digital services that work, and show the results.",
+      "share": "state-local-governments"
     },
     {
       "slug": "who-we-serve/federal-government",
       "source": "who-we-serve/federal-government.html",
       "page": "who-we-serve",
       "title": "Federal Government | The Momentum Firm",
-      "description": "Federal agencies deliver missions at national scale under intense scrutiny. We help them modernize programs, technology, and operations while keeping the mission on track."
+      "description": "Federal agencies deliver missions at national scale under intense scrutiny. We help them modernize programs, technology, and operations while keeping the mission on track.",
+      "share": "federal-government"
     },
     {
       "slug": "who-we-serve/intergovernmental-organizations",
       "source": "who-we-serve/intergovernmental-organizations.html",
       "page": "who-we-serve",
       "title": "Intergovernmental Organizations | The Momentum Firm",
-      "description": "Multilateral bodies, regional councils, and international organizations bring many governments to one table. We help them align priorities, govern shared programs, and deliver across borders."
+      "description": "Multilateral bodies, regional councils, and international organizations bring many governments to one table. We help them align priorities, govern shared programs, and deliver across borders.",
+      "share": "intergovernmental-organizations"
     },
     {
       "slug": "who-we-serve/k-12-schools",
       "source": "who-we-serve/k-12-schools.html",
       "page": "who-we-serve",
       "title": "K-12 Schools | The Momentum Firm",
-      "description": "School districts and charter networks shape the future of every community they serve. We help district leaders strengthen operations, use data well, and lead change that reaches the classroom."
+      "description": "School districts and charter networks shape the future of every community they serve. We help district leaders strengthen operations, use data well, and lead change that reaches the classroom.",
+      "share": "k-12-schools"
     },
     {
       "slug": "who-we-serve/higher-education",
       "source": "who-we-serve/higher-education.html",
       "page": "who-we-serve",
       "title": "Higher Education | The Momentum Firm",
-      "description": "Colleges, universities, and systems are rethinking how they operate in a changing landscape. We help them strengthen institutional performance, modernize the student experience, and lead change on campus."
+      "description": "Colleges, universities, and systems are rethinking how they operate in a changing landscape. We help them strengthen institutional performance, modernize the student experience, and lead change on campus.",
+      "share": "higher-education"
     },
     {
       "slug": "who-we-serve/nonprofits",
       "source": "who-we-serve/nonprofits.html",
       "page": "who-we-serve",
       "title": "Nonprofits | The Momentum Firm",
-      "description": "Mission-driven organizations work on the front line of community needs. We help nonprofits strengthen operations, prove their impact, and grow without losing sight of the people they serve."
+      "description": "Mission-driven organizations work on the front line of community needs. We help nonprofits strengthen operations, prove their impact, and grow without losing sight of the people they serve.",
+      "share": "nonprofits"
     },
     {
       "slug": "who-we-serve/public-health",
       "source": "who-we-serve/public-health.html",
       "page": "who-we-serve",
       "title": "Public Health | The Momentum Firm",
-      "description": "Health departments and public health agencies protect entire communities. We help them deliver programs, use data to act faster, and build the workforce and systems to meet the next challenge."
+      "description": "Health departments and public health agencies protect entire communities. We help them deliver programs, use data to act faster, and build the workforce and systems to meet the next challenge.",
+      "share": "public-health"
     },
     {
       "slug": "insights",
@@ -129,7 +139,9 @@
       "source": "our-founder.html",
       "page": "our-founder",
       "title": "Our Founder | The Momentum Firm",
-      "description": "Lakeisha Sesay, MPA, founded The Momentum Firm after leading complex public-sector transformation programs, including as a North America Strategy Executive at Accenture."
+      "description": "Lakeisha Sesay, MPA, founded The Momentum Firm after leading complex public-sector transformation programs, including as a North America Strategy Executive at Accenture.",
+      "share": "our-founder",
+      "share_alt": "The Momentum Firm logo beside a portrait of Lakeisha Sesay"
     },
     {
       "slug": "about",

@@ -22,12 +22,22 @@ editing it directly is wasted work — the next build overwrites it.
 | Nav, mega menus, mobile drawer | `src/partials/header.html` |
 | Footer | `src/partials/footer.html` |
 | `<head>`, meta tags, fonts | `src/partials/head.html` |
-| Page titles, meta descriptions | `site.json` |
+| Page titles, meta descriptions, link-preview images | `site.json` |
 | Styling | `assets/css/styles.css` (not generated — edit directly) |
 | Behaviour | `assets/js/site.js` (not generated — edit directly) |
 
 After building, `python3 preview.py` bundles the whole site into a single
 `preview.html` for sharing a review link. It's gitignored; regenerate as needed.
+
+Link previews (when someone pastes a URL into a message or post) use a 1200x630
+image from `assets/img/share/`, named by each page's `share` key in `site.json`;
+pages without one get `default.jpg`, the white logo on navy. Photo pages show
+their hero photo with a navy fade and the white logo, with no red rule (the
+client's choice). After replacing a hero or industry photo, re-run
+`swift tools/share-images.swift` (macOS) to refresh its preview image. Shared
+titles drop the " | The Momentum Firm" suffix on inner pages. The preview URLs
+point at `site.origin`, which is the custom domain. That domain doesn't serve this
+site yet, so preview images won't load until launch.
 
 Links in `src/` use a `{{B}}` token for the path back to the site root. The
 build expands it (`""` at root, `"../"` one level down, `"../../"` for the

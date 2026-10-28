@@ -48,9 +48,23 @@ ORG_JSONLD = """<script type="application/ld+json">
 </script>""" % (ORIGIN, ORIGIN)
 
 
+SUFFIX = " | The Momentum Firm"
+
+
 def render(page, base, body, canonical, jsonld=""):
+    # link previews already show the site name, so inner pages drop the suffix
+    share_title = page["title"]
+    if page["slug"] and share_title.endswith(SUFFIX):
+        share_title = share_title[: -len(SUFFIX)]
+    # 1200x630 preview image from tools/share-images.swift; logo card by default
+    share = page.get("share", "default")
     head = (
         HEAD.replace("{{TITLE}}", page["title"])
+        .replace("{{SHARE_TITLE}}", share_title)
+        .replace("{{SHARE_IMAGE}}", "%s/assets/img/share/%s.jpg" % (ORIGIN, share))
+        .replace("{{SHARE_ALT}}", page.get("share_alt") or (
+            "The Momentum Firm logo" if share == "default"
+            else "The Momentum Firm logo over a photograph"))
         .replace("{{DESC}}", page["description"])
         .replace("{{CANONICAL}}", canonical)
         .replace("{{PAGE}}", page["page"])
