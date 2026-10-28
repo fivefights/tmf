@@ -106,8 +106,13 @@ Our Firm (`/about/`) and Our Mission, Vision, & Values are the exceptions:
 below their cream header, the content sections are all white, separated by
 hairline rules (`.band--ruled`), at the client's request.
 
-The homepage hero is a four-slide carousel (positioning, Beyond the Strategy,
-Success Measured by Impact, Talent Network). Slides share one grid cell so the
+The homepage hero is a three-slide carousel (What We Do, Who We Serve, Our
+Firm), each linking to its section's top page. Every slide is a full-bleed photo
+with the copy over a navy scrim that is solid on the left and clears to the
+right, so photos should keep their subject right of centre. Photos live at
+`assets/img/hero-capabilities.jpg`, `hero-industries.jpg` and `hero-firm.jpg`
+(2:1, 1800x900); replace a file under the same name to change one. The client
+rejected the road and traffic imagery. Slides share one grid cell so the
 hero takes the height of the tallest and never jumps. Auto-advance stops on
 hover and focus and ends for the session once a visitor touches a control; it
 never starts under `prefers-reduced-motion`.
