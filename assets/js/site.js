@@ -7,8 +7,8 @@
   /* ----------------------------------------------------------
      Current-section highlight
      Some pages live under a nav heading that isn't their own
-     slug — press sits under Insights; the founder, mission and
-     social impact pages sit under About.
+     slug: press sits under Insights; the founder and social
+     impact pages sit under About.
      ---------------------------------------------------------- */
   var NAV_FOR = {
     "what-we-do": "what",
@@ -17,7 +17,6 @@
     "press": "insights",
     "our-founder": "about",
     "about": "about",
-    "mission-vision-values": "about",
     "social-impact": "about",
     "careers": "careers"
   };

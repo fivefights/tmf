@@ -54,7 +54,7 @@
       "source": "what-we-do/innovation-digital-experience.html",
       "page": "what-we-do",
       "title": "Innovation & Digital Experience | The Momentum Firm",
-      "description": "Digital products and services researched, designed, and built around the people who use them. Public-sector digital services: Innovation Sprints & Design Workshops, New Program Design & Pilots, Program Evaluation & Improvement, 311 & Constituent Services Modernization, Digital Product & Usability Design, Web & Mobile Product Design, Web Application Development."
+      "description": "Digital products and services researched, designed, and built around the people who use them. Public-sector digital services: 311 & Constituent Services Modernization, Digital Product & Usability Design, Web & Mobile Product Design, Web Application Development, Innovation Sprints & Design Workshops, New Program Design & Pilots, Program Evaluation & Improvement."
     },
     {
       "slug": "social-impact",
@@ -68,7 +68,7 @@
       "source": "who-we-serve.html",
       "page": "who-we-serve",
       "title": "Client Industries | The Momentum Firm",
-      "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, and public health.",
+      "description": "We partner with mission-driven organizations across state, local, and federal government, intergovernmental organizations, K-12 and higher education, nonprofits, philanthropy, and corporate social responsibility.",
       "share": "who-we-serve"
     },
     {
@@ -120,26 +120,41 @@
       "share": "nonprofits"
     },
     {
-      "slug": "who-we-serve/public-health",
-      "source": "who-we-serve/public-health.html",
+      "slug": "who-we-serve/philanthropy-community-investment",
+      "source": "who-we-serve/philanthropy-community-investment.html",
       "page": "who-we-serve",
-      "title": "Public Health | The Momentum Firm",
-      "description": "Health departments and public health agencies protect entire communities. We help them deliver programs, use data to act faster, and build the workforce and systems to meet the next challenge.",
-      "share": "public-health"
+      "title": "Philanthropy & Community Investment | The Momentum Firm",
+      "description": "Foundations, donor collaboratives, and community investors fund the work that changes neighborhoods. We help them set strategy, deploy capital with purpose, and show what their investments make possible."
+    },
+    {
+      "slug": "who-we-serve/corporate-social-responsibility",
+      "source": "who-we-serve/corporate-social-responsibility.html",
+      "page": "who-we-serve",
+      "title": "Corporate Social Responsibility | The Momentum Firm",
+      "description": "Companies are expected to show up for the communities where they operate. We help corporate social responsibility teams build programs that align with the business and deliver measurable community impact."
     },
     {
       "slug": "insights",
       "source": "insights.html",
       "page": "insights",
       "title": "Mindful Momentum | The Momentum Firm",
-      "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public \u2014 whitepapers on governors' agendas, high-performing public organizations, human-centered AI, and governing license plate reader technology."
+      "description": "Research, frameworks, and field notes for public sector leaders who have to deliver in public, including whitepapers on the first 100 days in office, high-performing public organizations, human-centered AI, and governing license plate reader technology."
+    },
+    {
+      "slug": "insights/100-day-transition-blueprint",
+      "source": "insights/100-day-transition-blueprint.html",
+      "page": "insights",
+      "title": "100-Day Transition Blueprint for New Government Executives | The Momentum Firm",
+      "description": "A four-stage, non-partisan playbook for incoming governors, mayors and county executives to turn 2026 election mandates into measurable results in the First 100 Days.",
+      "share": "100-day-transition-blueprint",
+      "share_alt": "The Momentum Firm logo beside a phone screen reading First 100 Days"
     },
     {
       "slug": "our-founder",
       "source": "our-founder.html",
       "page": "our-founder",
-      "title": "Our Founder | The Momentum Firm",
-      "description": "Lakeisha Sesay, MPA, founded The Momentum Firm after leading complex public-sector transformation programs, including as a North America Strategy Executive at Accenture.",
+      "title": "Founder Bio | The Momentum Firm",
+      "description": "Lakeisha Sesay, MPA, is an award-winning public sector strategist, policy advisor, university instructor, and management consulting executive, and the founder of The Momentum Firm.",
       "share": "our-founder",
       "share_alt": "The Momentum Firm logo beside a portrait of Lakeisha Sesay"
     },
@@ -147,15 +162,8 @@
       "slug": "about",
       "source": "about.html",
       "page": "about",
-      "title": "Our Firm | The Momentum Firm",
-      "description": "The Momentum Firm is an end-to-end management consultancy for governments, the public sector, and social impact organizations, with offices in Atlanta, Washington, D.C., and Los Angeles."
-    },
-    {
-      "slug": "mission-vision-values",
-      "source": "mission-vision-values.html",
-      "page": "mission-vision-values",
-      "title": "Our Mission, Vision, & Values | The Momentum Firm",
-      "description": "Why The Momentum Firm exists, where it is headed, and the values behind the work: integrity, agility, community, innovation, excellence, and impact."
+      "title": "About Us | The Momentum Firm",
+      "description": "The Momentum Firm is an end-to-end management consultancy for public service organizations. Our story, mission, vision, values, and offices."
     },
     {
       "slug": "careers",
@@ -169,14 +177,14 @@
       "source": "press.html",
       "page": "press",
       "title": "Press Releases | The Momentum Firm",
-      "description": "Announcements, awards, partnerships, and contract news from The Momentum Firm."
+      "description": "Press releases and announcements from The Momentum Firm."
     },
     {
       "slug": "contact",
       "source": "contact.html",
       "page": "contact",
       "title": "Contact Us | The Momentum Firm",
-      "description": "Get in touch with The Momentum Firm \u2014 offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com, 404-895-3762."
+      "description": "Get in touch with The Momentum Firm, with offices in Atlanta, Washington, D.C., and Los Angeles. info@themomentumfirm.com"
     }
   ]
 }

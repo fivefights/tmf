@@ -17,6 +17,7 @@ project URLs, a staging folder, or opened straight off disk.
 import json
 import os
 import pathlib
+import re
 import shutil
 
 ROOT = pathlib.Path(__file__).parent.resolve()
@@ -25,6 +26,12 @@ CONF = json.loads((ROOT / "site.json").read_text())
 ORIGIN = CONF["site"]["origin"].rstrip("/")
 
 HEAD = (SRC / "partials" / "head.html").read_text()
+
+# the browser's toolbar/overscroll colour is the --navy-deep token from the
+# stylesheet; a meta tag can't read CSS variables, so the build copies it in
+THEME_COLOR = re.search(
+    r"--navy-deep:\s*(#[0-9A-Fa-f]{3,8})", (ROOT / "assets" / "css" / "styles.css").read_text()
+).group(1)
 HEADER = (SRC / "partials" / "header.html").read_text()
 FOOTER = (SRC / "partials" / "footer.html").read_text()
 
@@ -37,7 +44,6 @@ ORG_JSONLD = """<script type="application/ld+json">
   "url": "%s/",
   "logo": "%s/assets/img/logo-navy.png",
   "email": "info@themomentumfirm.com",
-  "telephone": "+1-404-895-3762",
   "founder": {"@type": "Person", "name": "Lakeisha Sesay, MPA"},
   "address": [
     {"@type": "PostalAddress", "streetAddress": "384 Northyards Blvd NW, Unit 190", "addressLocality": "Atlanta", "addressRegion": "GA", "postalCode": "30313", "addressCountry": "US"},
@@ -69,6 +75,7 @@ def render(page, base, body, canonical, jsonld=""):
         .replace("{{CANONICAL}}", canonical)
         .replace("{{PAGE}}", page["page"])
         .replace("{{JSONLD}}", jsonld)
+        .replace("{{THEME_COLOR}}", THEME_COLOR)
     )
     doc = "\n".join([
         head,
