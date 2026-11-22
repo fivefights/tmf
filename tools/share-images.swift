@@ -18,6 +18,8 @@ let img = root + "/assets/img/"
 let out = img + "share/"
 
 // output name: (source photo, vertical focus 0 = top … 1 = bottom)
+// photos whose subject fills the lower right fade in from the left instead
+let sideFade: Set<String> = ["100-day-transition-blueprint"]
 let photos: [(String, String, CGFloat)] = [
     ("home", "hero-capabilities.jpg", 0.45),
     ("what-we-do", "hero-what-we-do.jpg", 0.5),
@@ -28,7 +30,7 @@ let photos: [(String, String, CGFloat)] = [
     ("k-12-schools", "industry-k-12-schools.jpg", 0.5),
     ("higher-education", "industry-higher-education.jpg", 0.5),
     ("nonprofits", "industry-nonprofits.jpg", 0.5),
-    ("public-health", "industry-public-health.jpg", 0.5),
+    ("100-day-transition-blueprint", "insights/100-day-transition-blueprint.jpg", 0.9),
 ]
 
 func load(_ name: String) -> CGImage {
@@ -70,8 +72,13 @@ try? FileManager.default.createDirectory(atPath: out, withIntermediateDirectorie
 for (name, src, focus) in photos {
     let c = canvas()
     cover(c, load(src), CGRect(x: 0, y: 0, width: W, height: H), focus)
-    let fade = CGGradient(colorsSpace: nil, colors: [navy(0.96), navy(0.72), navy(0)] as CFArray, locations: [0, 0.4, 0.78])!
-    c.drawLinearGradient(fade, start: .zero, end: CGPoint(x: 0, y: H), options: [])
+    if sideFade.contains(name) {
+        let fade = CGGradient(colorsSpace: nil, colors: [navy(0.96), navy(0.7), navy(0)] as CFArray, locations: [0, 0.22, 0.4])!
+        c.drawLinearGradient(fade, start: .zero, end: CGPoint(x: W, y: 0), options: [])
+    } else {
+        let fade = CGGradient(colorsSpace: nil, colors: [navy(0.96), navy(0.72), navy(0)] as CFArray, locations: [0, 0.4, 0.78])!
+        c.drawLinearGradient(fade, start: .zero, end: CGPoint(x: 0, y: H), options: [])
+    }
     logo(c, x: 60, y: 48, w: 340)
     save(c, name)
 }

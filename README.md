@@ -17,11 +17,10 @@ placeholder and is marked as such both in the pages and in this file.
 ├── what-we-do/<capability>/index.html  ← one page per capability (5)
 ├── social-impact/index.html
 ├── who-we-serve/index.html  ← industries contents list
-├── who-we-serve/<industry>/index.html  ← one page per industry (7)
+├── who-we-serve/<industry>/index.html  ← one page per industry (8)
 ├── insights/index.html
 ├── our-founder/index.html
-├── about/index.html        ← Our Firm, offices list at the bottom
-├── mission-vision-values/index.html
+├── about/index.html        ← About Us: story, mission, vision, values, offices
 ├── careers/index.html
 ├── press/index.html
 ├── contact/index.html
@@ -125,7 +124,7 @@ about what cream becomes. Sections are composed from semantic tokens
 colors, so grounds can be re-tuned in one place.
 
 Recurring devices carried over from the brochure: the red letterspaced eyebrow
-with its short rule, the numbered index used for client industries, and the
+with its short rule, the index list of capabilities and industries, and the
 offset red corner bracket on the founder portrait.
 
 ## Known placeholders

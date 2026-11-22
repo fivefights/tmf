@@ -85,8 +85,16 @@ Form submit buttons on the blue stay red.
 
 Recurring devices: the red letterspaced eyebrow with its short rule underneath
 (gold on cream and white, red on navy and blue; set by `--eyebrow-rule`),
-and the numbered index used for client industries. Corner radius is 4px on
-controls and cards.
+and the index list of capabilities and industries. The client had the
+numbers taken off index rows, eyebrows ("Capability 01 of 05") and pagers;
+don't bring them back. Corner radius is 4px on controls and cards.
+
+The client wants as few em dashes as possible in site copy. Reword with
+commas, colons or full stops instead; `src/` currently has none.
+
+The page canvas (`html`) is `--navy-deep` so overscrolling past the top or
+bottom shows the footer's navy, not a white gap. `body` stays white because
+plain `.band` sections show it through.
 
 ### There is no dark theme, on purpose
 
@@ -102,18 +110,25 @@ one without first deciding what cream becomes in it.
 
 ## Page structure
 
-Twenty-three pages: `/`, `/what-we-do/` (a contents list) plus one page per
+Twenty-four pages: `/`, `/what-we-do/` (a contents list) plus one page per
 capability at `/what-we-do/<capability>/`, `/who-we-serve/` (a contents list)
-plus one page per industry at `/who-we-serve/<industry>/`, `/insights/`,
-`/our-founder/`, `/about/` (Our Firm, with the offices list at `#offices`),
-`/mission-vision-values/`, `/social-impact/`, `/careers/`, `/press/`,
-`/contact/`, plus `404.html`. There is no separate offices page.
+plus one page per industry at `/who-we-serve/<industry>/` (eight: three
+government, two education, three social sector), `/insights/` plus the
+whitepaper article at `/insights/100-day-transition-blueprint/`,
+`/our-founder/` (Founder Bio), `/about/` (About Us: who we are, our story,
+mission, vision, values at `#mission` and `#our-values`, and the offices list
+at `#offices`), `/social-impact/`, `/careers/`, `/press/`, `/contact/`, plus
+`404.html`. There is no separate offices or mission page; Mission, Vision, &
+Values was folded into About Us at the client's request. The site carries no
+phone number, also at the client's request.
 
 Section grounds alternate cream and white, and **every page closes on
 `--blue2`** before the navy footer. Careers, Contact and Social Impact put their form section
 on the blue instead of adding a redundant CTA after a form.
-Our Firm (`/about/`) and Our Mission, Vision, & Values are the exceptions:
-below their cream header, the content sections are all white, separated by
+The last content on every page sits at least 100px above that closing blue
+on desktop (64px on phones), set once by `--end-gap` in the CLOSING GAP block
+of the CSS. Don't add bottom padding page by page.
+About Us (`/about/`) is the exception: below its cream header, the content sections are all white, separated by
 hairline rules (`.band--ruled`), at the client's request.
 
 The homepage hero is a three-slide carousel (What We Do, Who We Serve, Our
@@ -128,24 +143,19 @@ hover and focus and ends for the session once a visitor touches a control; it
 never starts under `prefers-reduced-motion`.
 
 Navigation: What We Do, Who We Serve, Insights (Mindful Momentum + Press), About
-(Our Founder, Our Firm, Our Mission, Vision, & Values, Social Impact),
+(one Our Firm column with no descriptions: About Us, Founder Bio, Social Impact),
 Careers, plus a red Contact Us button. All nav labels and form dropdown options are title case.
 Buttons carry no arrow and centre their labels; arrows stay on text links,
 index rows, and the carousel controls, where they indicate direction.
 
 ---
 
-## Draft copy
+## Copy status
 
-Unsourced copy is marked with a red asterisk (`<span class="draft">*</span>`)
-and a `.draftnote` explaining it at the foot of its section. Keep that
-convention for anything written as a placeholder — it's how the client spots
-what still needs their words.
-
-Currently flagged: the capability overviews and all 21 service descriptions on
-What We Do (initial drafts from the v8 brochure), the industry
-descriptions and industry pages, the Social Impact page's descriptions, the whitepaper summaries,
-and one press release with no named recipient.
+All site copy is final as of the V1 go-live review: the client asked for every
+draft asterisk and "draft" note to be removed. Don't add them back. If new
+placeholder copy is ever needed, ask the client how they want it flagged.
+The `.draft` and `.draftnote` styles remain in the CSS, unused.
 
 Source documents, if copy questions come up: the firm brochure (v8 is current;
 the final capability and service list came from the client with it), the
@@ -192,12 +202,18 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
   a hidden `category` field (General Inquiry, Talent Network Inquiry, Request
   for Community Support) becomes the subject. Wire the `submission` object in
   `site.js`'s success branch to a form service or endpoint.
-- Individual insight articles and service detail pages. Each capability has its
-  own page with prev/next pagination (capability 05 hands off to Who We Serve);
+- Service detail pages. One insight article is live (the 100-day transition
+  blueprint, source `src/pages/insights/`, styled by the ARTICLE block in the
+  CSS). Its hero image goes at
+  `assets/img/insights/100-day-transition-blueprint.jpg`; until then
+  `.article-figure--pending` shows the bars motif. The other three
+  whitepapers are "Coming soon" cards (`.icard--soon`) that don't link.
+  Each capability has its
+  own page with prev/next pagination (the last capability hands off to Who We Serve);
   service cards carry ids (`#strategic-planning`, …) ready for future pages.
   Capability page sources live in `src/pages/what-we-do/`. Industry pages
-  follow the same pattern in `src/pages/who-we-serve/` (industry 07 hands off
-  to Insights).
+  follow the same pattern in `src/pages/who-we-serve/` (the last industry hands
+  off to Insights).
   Each industry hero photo lives at `assets/img/industry-<industry>.jpg`
   (4:3, 1200x900); to change one, replace that file under the same name.
   `.pagehead-img--pending` (the rising-bars motif) is the fallback styling
