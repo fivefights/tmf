@@ -967,3 +967,23 @@ main > :has(+ .band--blue:last-child){padding-bottom:var(--end-gap)}
 /* the article page wraps its sections in <article>; the gap goes on its last band */
 main > article:has(+ .band--blue:last-child){padding-bottom:0}
 main > article:has(+ .band--blue:last-child) > .band:last-child{padding-bottom:var(--end-gap)}
+
+/* ============================================================
+   CREAM HEADER WITH THE LOGO MARK (About Us): the round mark from
+   logo-mark.svg, oversized in brand red and faint, set behind the
+   copy on the left; the Our Firm photo sits on the right. A mask lets the colour come from
+   the --red token rather than the SVG file.
+   ============================================================ */
+.pagehead--mark{position:relative;overflow:hidden;isolation:isolate}
+.pagehead--mark .wrap{position:relative}
+.pagehead-mark{
+  position:absolute;z-index:-1;top:50%;left:clamp(-170px,-9vw,-60px);transform:translateY(-50%);
+  width:clamp(340px,44vw,640px);aspect-ratio:1;background:var(--red);opacity:.1;pointer-events:none;
+  -webkit-mask:url("../img/logo-mark.svg") center/contain no-repeat;
+  mask:url("../img/logo-mark.svg") center/contain no-repeat;
+}
+/* once the header stacks (as .pagehead-split does at 820px) the mark moves
+   up beside the headline, clear of the photo below */
+@media (max-width:820px){
+  .pagehead-mark{top:-30px;left:auto;right:-80px;transform:none;width:clamp(260px,40vw,340px);opacity:.1}
+}
