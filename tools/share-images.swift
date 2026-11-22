@@ -30,6 +30,7 @@ let photos: [(String, String, CGFloat)] = [
     ("k-12-schools", "industry-k-12-schools.jpg", 0.5),
     ("higher-education", "industry-higher-education.jpg", 0.5),
     ("nonprofits", "industry-nonprofits.jpg", 0.1),
+    ("philanthropy-community-investment", "industry-philanthropy-community-investment.jpg", 0.5),
     ("100-day-transition-blueprint", "insights/100-day-transition-blueprint.jpg", 0.9),
 ]
 
