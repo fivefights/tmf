@@ -92,9 +92,10 @@ don't bring them back. Corner radius is 4px on controls and cards.
 The client wants as few em dashes as possible in site copy. Reword with
 commas, colons or full stops instead; `src/` currently has none.
 
-The page canvas (`html`) is `--navy-deep` so overscrolling past the top or
-bottom shows the footer's navy, not a white gap. `body` stays white because
-plain `.band` sections show it through.
+`html` and `body` are both `--navy-deep` so overscrolling past the top or
+bottom shows the footer's navy, not a white gap (mobile Safari reads `body`,
+not `html`). The white ground that plain `.band` sections show through is on
+`main`.
 
 ### There is no dark theme, on purpose
 
@@ -131,18 +132,19 @@ of the CSS. Don't add bottom padding page by page.
 About Us (`/about/`) is the exception: below its cream header, the content sections are all white, separated by
 hairline rules (`.band--ruled`), at the client's request.
 
-The homepage hero is a three-slide carousel (What We Do, Who We Serve, Our
-Firm), each linking to its section's top page. Every slide is a full-bleed photo
+The homepage hero is a four-slide carousel (What We Do, Who We Serve, the
+featured 100-day whitepaper, Our Firm), each linking to its page. Every slide is a full-bleed photo
 with the copy over a navy scrim that is solid on the left and clears to the
 right, so photos should keep their subject right of centre. Photos live at
-`assets/img/hero-capabilities.jpg`, `hero-industries.jpg` and `hero-firm.jpg`
+`assets/img/hero-capabilities.jpg`, `hero-industries.jpg`, `hero-insights.jpg`
+and `hero-firm.jpg`
 (2:1, 1800x900); replace a file under the same name to change one. The client
 rejected the road and traffic imagery. Slides share one grid cell so the
 hero takes the height of the tallest and never jumps. Auto-advance stops on
 hover and focus and ends for the session once a visitor touches a control; it
 never starts under `prefers-reduced-motion`.
 
-Navigation: What We Do, Who We Serve, Insights (Mindful Momentum + Press), About
+Navigation: What We Do, Who We Serve, Insights (Whitepapers + Press), About
 (one Our Firm column with no descriptions: About Us, Founder Bio, Social Impact),
 Careers, plus a red Contact Us button. All nav labels and form dropdown options are title case.
 Buttons carry no arrow and centre their labels; arrows stay on text links,

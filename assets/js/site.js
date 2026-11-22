@@ -78,6 +78,18 @@
      ---------------------------------------------------------- */
   var burger = document.getElementById("burger");
   var drawer = document.getElementById("drawer");
+  var masthead = document.querySelector(".masthead");
+
+  // The drawer is fixed to the viewport, so it opens in view however far the
+  // page has scrolled. Keep its top edge on the sticky masthead's bottom edge
+  // (which moves while the utility strip scrolls away) and let it scroll
+  // inside itself when it's taller than the screen.
+  function placeDrawer() {
+    if (!drawer || !masthead || !drawer.classList.contains("open")) return;
+    var top = Math.max(0, masthead.getBoundingClientRect().bottom);
+    drawer.style.top = top + "px";
+    drawer.style.maxHeight = (window.innerHeight - top) + "px";
+  }
 
   function closeDrawer() {
     if (!drawer || !burger) return;
@@ -91,7 +103,10 @@
       var open = drawer.classList.toggle("open");
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      placeDrawer();
     });
+    window.addEventListener("scroll", placeDrawer, { passive: true });
+    window.addEventListener("resize", placeDrawer);
   }
 
   document.addEventListener("keydown", function (e) {

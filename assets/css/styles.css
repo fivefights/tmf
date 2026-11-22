@@ -58,13 +58,15 @@
   --gutter:clamp(18px,4vw,56px);
 }
 *{box-sizing:border-box}
-/* the canvas behind the page is the footer's navy, so overscrolling past the
-   top or bottom shows dark blue rather than a white gap; body keeps the
-   white ground that plain sections sit on */
+/* everything behind the page is the footer's navy, so overscrolling past the
+   top or bottom shows dark blue rather than a white gap. Mobile Safari paints
+   that area from body, not html, so both are navy; the white ground that
+   plain sections sit on belongs to main instead */
 html{background:var(--navy-deep)}
+main{display:block;background:var(--page-bg)}
 body{
   margin:0;
-  background:var(--page-bg);
+  background:var(--navy-deep);
   color:var(--page-fg);
   font-family:"Rubik",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:16px;
@@ -240,9 +242,14 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 }
 .burger span{display:block;width:20px;height:2px;background:currentColor}
 @media (max-width:1080px){.burger{display:flex}}
+/* pinned under the sticky masthead so it opens in view wherever the visitor
+   has scrolled; site.js sets top and max-height from the masthead's position */
 .drawer{
   display:none;background:var(--blue2);color:#fff;
   border-bottom:1px solid rgba(250,242,223,.2);
+  position:fixed;left:0;right:0;top:0;z-index:59;
+  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+  box-shadow:0 18px 30px -18px rgba(0,26,53,.6);
 }
 .drawer.open{display:block}
 .drawer .wrap{padding-block:22px 30px}
@@ -406,6 +413,20 @@ h4{font-size:1rem;font-weight:700;letter-spacing:0}
 }
 .founder-quote em{font-style:italic}
 @media (max-width:820px){.founder-quote{max-width:none}}
+/* phones: one column ordered eyebrow, portrait, name, role, statement, bio.
+   Both column wrappers dissolve so their children share the .founder grid. */
+@media (max-width:820px){
+  .founder{gap:18px}
+  .founder > div,.founder .copy{display:contents}
+  .founder .eyebrow{order:1}
+  .founder .portrait{order:2;margin-top:4px}
+  .founder h1{order:3;margin-top:10px}
+  .founder .role{order:4;margin-top:-2px}  /* 16px below the name (18px grid gap less 2px) */
+  .founder-quote{order:5;margin-top:6px}
+  .founder .copy > p:not(.role){order:6}
+  .founder .role + p{margin-top:14px}  /* 32px between the statement and the bio */
+  .founder .role ~ p + p{margin-top:6px}  /* 24px between bio paragraphs */
+}
 /* homepage firm intro: eyebrow, headline, then the full wordmark */
 .firm-intro .firm-logo{display:block;width:min(100%,340px);height:auto;margin-top:clamp(22px,2.6vw,32px)}
 .firm-intro .lede{margin-top:clamp(20px,2.4vw,28px)}
@@ -617,6 +638,8 @@ form{display:grid;gap:18px}
 /* Page headers sit on cream, not navy — navy is reserved for the homepage
    hero and the footer, so it stays an accent rather than the ground. */
 .pagehead{background:var(--soft-bg);color:var(--soft-fg);padding-block:clamp(40px,5vw,72px)}
+/* a regular band that opens a page (Founder Bio) starts as close to the header as a .pagehead */
+.band--pagetop{padding-top:clamp(40px,5vw,72px)}
 .pagehead h1{color:var(--soft-fg);font-size:clamp(2rem,4.4vw,3.2rem)}
 .pagehead .lede{color:var(--soft-muted);margin-top:18px}
 /* a cream band straight after a cream page header is one continuous ground */
