@@ -813,6 +813,9 @@ form{display:grid;gap:18px}
     background:linear-gradient(0deg,rgba(0,26,53,.96) 0%,rgba(0,26,53,.86) 48%,rgba(0,26,53,.45) 100%);
   }
 }
+/* the 100-day slide swaps to a tall crop on phones (see index.html <picture>)
+   so the phone screen and a corner of the flag survive the narrow frame */
+.hslide picture{display:contents}
 
 /* controls */
 .hero-controls{

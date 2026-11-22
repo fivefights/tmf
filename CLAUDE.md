@@ -138,7 +138,10 @@ with the copy over a navy scrim that is solid on the left and clears to the
 right, so photos should keep their subject right of centre. Photos live at
 `assets/img/hero-capabilities.jpg`, `hero-industries.jpg`, `hero-insights.jpg`
 and `hero-firm.jpg`
-(2:1, 1800x900); replace a file under the same name to change one. The client
+(2:1, 1800x900); replace a file under the same name to change one. On phones the
+100-day slide swaps to `hero-insights-mobile.jpg` (768x1204), a tall crop
+centred on the phone with a corner of the flag, so the full-bleed slide keeps
+the same navy fade as the others. The client
 rejected the road and traffic imagery. Slides share one grid cell so the
 hero takes the height of the tallest and never jumps. Auto-advance stops on
 hover and focus and ends for the session once a visitor touches a control; it
