@@ -129,7 +129,11 @@ on the blue instead of adding a redundant CTA after a form.
 The last content on every page sits at least 100px above that closing blue
 on desktop (64px on phones), set once by `--end-gap` in the CLOSING GAP block
 of the CSS. Don't add bottom padding page by page.
-About Us (`/about/`) is the exception: below its cream header, the content sections are all white, separated by
+About Us (`/about/`) is the exception. Its cream header carries the logo mark
+(`assets/img/logo-mark.svg`, traced from the logo) as a large, faint red
+watermark behind the copy, beside the Our Firm photo (`hero-about.jpg`, a 4:3
+crop of the carousel's `hero-firm.jpg`) (`.pagehead--mark`; the colour comes from `--red` via a
+CSS mask). Below it, the content sections are all white, separated by
 hairline rules (`.band--ruled`), at the client's request.
 
 The homepage hero is a four-slide carousel (What We Do, Who We Serve, the
@@ -138,7 +142,11 @@ with the copy over a navy scrim that is solid on the left and clears to the
 right, so photos should keep their subject right of centre. Photos live at
 `assets/img/hero-capabilities.jpg`, `hero-industries.jpg`, `hero-insights.jpg`
 and `hero-firm.jpg`
-(2:1, 1800x900); replace a file under the same name to change one. On phones the
+(2:1, 1800x900); replace a file under the same name to change one. Each
+carousel photo matches the header of the page its slide links to: the train
+station is `hero-capabilities.jpg` and, as a 4:3 crop, `hero-what-we-do.jpg`;
+the glass dome is `hero-industries.jpg` and `hero-who-we-serve.jpg`. Change both
+files of a pair together. On phones the
 100-day slide swaps to `hero-insights-mobile.jpg` (768x1204), a tall crop
 centred on the phone with a corner of the flag, so the full-bleed slide keeps
 the same navy fade as the others. The client
