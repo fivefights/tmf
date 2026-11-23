@@ -601,6 +601,14 @@ form{display:grid;gap:18px}
   background:var(--card-bg);font-size:.93rem;
 }
 .formdone.show{display:block}
+.formdone:focus{outline:none}
+/* shown under the submit button when the form service can't be reached */
+.formfail{font-size:.9rem;font-weight:500;color:var(--accent-light)}
+.band--blue .formfail{color:var(--accent-dark)}
+.band--blue .formfail a{color:#fff}
+button[type=submit]:disabled{opacity:.65;cursor:progress}
+/* spam trap: off-screen, out of the tab order, never seen by people */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 /* ============================================================
    CTA + FOOTER

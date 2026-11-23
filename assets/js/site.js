@@ -237,15 +237,29 @@
      Every field is required; email fields must look like an
      address. Errors show under each field and clear as the
      visitor fixes them. Message boxes count toward 500 characters.
-     All three forms go to one inbox; each carries a hidden
-     "category" field (General Inquiry, Talent Network Inquiry,
-     Request for Community Support) that becomes the subject.
-     Prototype behaviour only — no endpoint is wired up yet.
-     Send `submission` from the success branch to a form service
-     or endpoint when the backend is chosen.
+     All three forms go to one inbox through a form service
+     (Formspree). Each carries a hidden "category" field (General
+     Inquiry, Talent Network Inquiry, Request for Community
+     Support) that becomes the email's subject, and a hidden
+     "_gotcha" field that only bots fill in. Set FORM_ENDPOINT to
+     the form's endpoint URL from the service's dashboard.
      ---------------------------------------------------------- */
+  var FORM_ENDPOINT = "https://formspree.io/f/mnpdojbv";
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var INBOX = "info@themomentumfirm.com";
+
+  // a sentence under the submit button when sending fails
+  function setFail(f, on) {
+    var box = f.querySelector(".formfail");
+    if (!on) { if (box) box.remove(); return; }
+    if (!box) {
+      box = document.createElement("p");
+      box.className = "formfail";
+      box.setAttribute("role", "alert");
+      box.innerHTML = 'Sorry, your message didn\u2019t send. Please try again, or email us at <a href="mailto:' + INBOX + '">' + INBOX + '</a>.';
+      f.querySelector("button[type=submit]").insertAdjacentElement("afterend", box);
+    }
+  }
 
   function problem(el) {
     var v = (el.value || "").trim();
@@ -281,7 +295,11 @@
     var f = document.getElementById(pair[0]);
     var d = document.getElementById(pair[1]);
     if (!f || !d) return;
-    var fields = Array.prototype.slice.call(f.querySelectorAll("input:not([type=hidden]), select, textarea"));
+    var fields = Array.prototype.slice.call(f.querySelectorAll("input:not([type=hidden]):not([name=_gotcha]), select, textarea"));
+    var button = f.querySelector("button[type=submit]");
+    var label = button.textContent;
+    d.setAttribute("role", "status");
+    d.setAttribute("tabindex", "-1");
 
     fields.forEach(function (el) {
       var count = el.maxLength > 0 && document.getElementById(el.id + "-count");
@@ -307,11 +325,23 @@
         return;
       }
       var data = new FormData(f);
-      var submission = { to: INBOX, subject: data.get("category"), fields: {} };
-      data.forEach(function (value, key) { if (key !== "category") submission.fields[key] = value; });
-      // TODO: send `submission` to the chosen form service or endpoint.
-      d.classList.add("show");
-      d.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      data.append("_subject", data.get("category"));
+      d.classList.remove("show");
+      setFail(f, false);
+      if (!FORM_ENDPOINT) { setFail(f, true); return; }
+      button.disabled = true;
+      button.textContent = "Sending\u2026";
+      fetch(FORM_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } })
+        .then(function (r) {
+          if (!r.ok) throw new Error("form service returned " + r.status);
+          f.reset();
+          fields.forEach(function (el) { el.dispatchEvent(new Event("input")); });
+          d.classList.add("show");
+          d.scrollIntoView({ block: "nearest", behavior: "smooth" });
+          d.focus({ preventScroll: true });
+        })
+        .catch(function () { setFail(f, true); })
+        .then(function () { button.disabled = false; button.textContent = label; });
     });
   });
 })();

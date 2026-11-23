@@ -208,13 +208,16 @@ DNS at GitHub, and the absolute paths in `404.html` start working too.
 
 ## Not built yet
 
-- Form submission. Three forms (`#contact-form`, `#talent-form`, and
-  `#support-form` on Social Impact) validate in the browser (every field
-  required, email format, 500-character message boxes with a live counter),
-  then confirm in the UI and send nothing. All go to info@themomentumfirm.com;
-  a hidden `category` field (General Inquiry, Talent Network Inquiry, Request
-  for Community Support) becomes the subject. Wire the `submission` object in
-  `site.js`'s success branch to a form service or endpoint.
+- (Built.) Form submission. The three forms
+  (`#contact-form`, `#talent-form`, `#support-form` on Social Impact) validate
+  in the browser (every field required, email format, 500-character message
+  boxes with a live counter), then POST to `FORM_ENDPOINT` at the top of the
+  Forms block in `site.js` (Formspree form `mnpdojbv`, which emails
+  info@themomentumfirm.com; the account belongs to that inbox). A hidden `category` field (General Inquiry, Talent
+  Network Inquiry, Request for Community Support) becomes the subject via
+  `_subject`; `_gotcha` is a spam trap. If the service is unreachable or
+  rejects a submission, the form keeps its input and shows a "didn't send,
+  email us" message.
 - Service detail pages. One insight article is live (the 100-day transition
   blueprint, source `src/pages/insights/`, styled by the ARTICLE block in the
   CSS). Its hero image goes at
